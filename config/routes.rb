@@ -18,7 +18,7 @@ Coachstat::Application.routes.draw do
   match '/logout' => 'user#logout' 
   match '/myprofile' => 'profiles#myprofile'
   get '/clubs/:id/players', to: 'players#clubplayers'
-  get '/clubs/:id/player/:playerid', to: 'players#show'
+  get '/clubs/:id/players/:playerid', to: 'players#show'
   get '/clubs/:id/fixtures', to: 'fixtures#clubfixtures'
   get '/clubs/:id/fixture/:fixtureid', to: 'fixtures#clubfixture'
   get '/lineupplayers/:lineupid/lineup', to: 'lineupplayers#lineup'
