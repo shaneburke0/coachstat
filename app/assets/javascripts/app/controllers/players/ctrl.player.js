@@ -1,7 +1,8 @@
 coachStatControllers.controller('PlayerCtrl', ['$scope', '$http', '$log', '$routeParams', '$rootScope', 
 	function($scope, $http, $log, $routeParams, $rootScope) {
 	$scope.player = new ModelPlayer({});
-	$http({ method: 'GET', url: '/clubs/' + $routeParams.clubId +'/player/' + $routeParams.playerId, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
+	$scope.baseHref = '/clubs/' + $routeParams.clubId +'/players/' + $routeParams.playerId;
+	$http({ method: 'GET', url: $scope.baseHref, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
 		.success(function(data, status, headers, config) {
 			var player = new ModelPlayer({id: data.id, firstName: data.firstName, lastName: data.lastName, dob: data.dob, position: data.position, height: data.height, weight: data.weight, image: data.image, clubname: data.clubname});
 			$scope.player = player;

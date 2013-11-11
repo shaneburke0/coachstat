@@ -1,7 +1,8 @@
-coachStatControllers.controller('PlayerEditCtrl', ['$scope', '$http', '$log', '$routeParams', '$rootScope', 
-	function($scope, $http, $log, $routeParams, $rootScope) {
+coachStatControllers.controller('PlayerEditCtrl', ['$scope', '$http', '$log', '$routeParams', '$rootScope', '$location',
+	function($scope, $http, $log, $routeParams, $rootScope, $location) {
 	$scope.player = new ModelPlayer({});
-	$http({ method: 'GET', url: '/clubs/' + $routeParams.clubId +'/player/' + $routeParams.playerId, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
+	$scope.baseHref = '/clubs/' + $routeParams.clubId +'/players/' + $routeParams.playerId;
+	$http({ method: 'GET', url: $scope.baseHref, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
 		.success(function(data, status, headers, config) {
 			var player = new ModelPlayer({id: data.id, firstName: data.firstName, lastName: data.lastName, dob: data.dob, position: data.position, height: data.height, weight: data.weight, image: data.image, clubname: data.clubname});
 			$scope.player = player;
@@ -16,7 +17,7 @@ coachStatControllers.controller('PlayerEditCtrl', ['$scope', '$http', '$log', '$
             		   { label: 'Clubs', url: '#/clubs'},
             		   { label: $scope.player.clubname, url: '#/clubs/' + $routeParams.clubId },
             		   { label: 'Players', url: '#/clubs/' + $routeParams.clubId + '/players' },
-            		   { label: $scope.player.firstName + ' ' + $scope.player.lastName, url: '#/clubs/' + $routeParams.clubId + '/players/' + $scope.player.id, isActive: 'active' }];
+            		   { label: $scope.player.firstName + ' ' + $scope.player.lastName, url: '#' + $scope.baseHref, isActive: 'active' }];
 	}
 	$scope.save = function (_player) {
 		
@@ -31,5 +32,9 @@ coachStatControllers.controller('PlayerEditCtrl', ['$scope', '$http', '$log', '$
             }).error(function (data, status, headers, config) {
                 $log(data, status, headers, config);
             });
+    };
+    
+    $scope.cancel = function() {
+    	$location.path($scope.baseHref);
     };
 }]);
