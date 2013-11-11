@@ -1,0 +1,31 @@
+<h1>Listing lineupplayers</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Lineupid</th>
+    <th>Playerid</th>
+    <th>Captain</th>
+    <th>Formation</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lineupplayers.each do |lineupplayer| %>
+  <tr>
+    <td><%= lineupplayer.id %></td>
+    <td><%= lineupplayer.lineupid %></td>
+    <td><%= lineupplayer.playerid %></td>
+    <td><%= lineupplayer.captain %></td>
+    <td><%= lineupplayer.position %></td>
+    <td><%= link_to 'Show', lineupplayer %></td>
+    <td><%= link_to 'Edit', edit_lineupplayer_path(lineupplayer) %></td>
+    <td><%= link_to 'Destroy', lineupplayer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Lineupplayer', new_lineupplayer_path %>

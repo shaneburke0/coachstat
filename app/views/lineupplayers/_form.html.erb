@@ -1,0 +1,41 @@
+<%= form_for(@lineupplayer) do |f| %>
+  <% if @lineupplayer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lineupplayer.errors.count, "error") %> prohibited this lineupplayer from being saved:</h2>
+
+      <ul>
+      <% @lineupplayer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :lineupid %><br />
+    <%= f.number_field :lineupid %>
+  </div>
+  <div class="field">
+    <%= f.label :playerid %><br />
+    <%= f.number_field :playerid %>
+  </div>
+  <div class="field">
+    <%= f.label :positionid %><br />
+    <%= f.number_field :positionid %>
+  </div>
+  <div class="field">
+    <%= f.label :captain %><br />
+    <%= f.check_box :captain %>
+  </div>
+  <div class="field">
+    <%= f.label :position %><br />
+    <%= f.text_field :position %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

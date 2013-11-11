@@ -1,0 +1,31 @@
+<div ng-controller="PlayerCtrl">
+	<div><img ng-src="{{player.image}}"/></div>
+	<div>
+		<label>First name:</label>
+		<input ng-model="player.firstName"/>
+	</div>
+	<div>
+		<label>Last name:</label>
+		<input ng-model="player.lastName"/>
+	</div>
+	<div>
+		<label>Position:</label>
+		<input ng-model="player.position"/>
+	</div>
+	<div>
+		<label>Height</label>
+		<input ng-model="player.height"/>
+	</div>
+	<div>
+		<label>Weight</label>
+		<input ng-model="player.weight"/>
+	</div>
+	<div>
+		<label>D.O.B:</label>
+		<input ng-model="player.dob"/>
+	</div>
+	<div>
+		<button>Cancel</button>
+		<button ng-click="save(player)">Save</button>
+	</div>
+</div>

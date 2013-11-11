@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @lineupplayer.id %>
+</p>
+
+<p>
+  <b>Lineupid:</b>
+  <%= @lineupplayer.lineupid %>
+</p>
+
+<p>
+  <b>Playerid:</b>
+  <%= @lineupplayer.playerid %>
+</p>
+
+<p>
+  <b>Captain:</b>
+  <%= @lineupplayer.captain %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @lineupplayer.position %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_lineupplayer_path(@lineupplayer) %> |
+<%= link_to 'Back', lineupplayers_path %>

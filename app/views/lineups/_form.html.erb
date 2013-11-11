@@ -1,0 +1,29 @@
+<%= form_for(@lineup) do |f| %>
+  <% if @lineup.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lineup.errors.count, "error") %> prohibited this lineup from being saved:</h2>
+
+      <ul>
+      <% @lineup.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.number_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :fixtureid %><br />
+    <%= f.number_field :fixtureid %>
+  </div>
+  <div class="field">
+    <%= f.label :clubid %><br />
+    <%= f.number_field :clubid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

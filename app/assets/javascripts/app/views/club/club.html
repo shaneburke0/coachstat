@@ -1,0 +1,52 @@
+<div ng-controller="ClubCtrl" class="club">	
+		<div class="box details">
+			<a href="{{detailsHref}}"><h2>Details</h2></a>
+			<div class="boxinner">
+				<img ng-src="{{club.image}}" title="{{club.name}}" />
+				<div>{{club.name}}</div>
+				<div>{{club.location}}</div>
+				<div>{{club.type}}</div>
+			</div>
+		</div>
+		<div class="box lrg players">
+			<a href="{{playersHref}}"><h2>Players</h2></a>
+			<div class="boxinner">
+				<div ng-repeat="player in club.players" >
+					<span class="player-thumb tilt">
+						<a href="{{playersHref}}/{{player.id}}" alt="{{player.lastName}}"
+							title="{{player.firstName}} {{player.lastName}}">
+							<img ng-src="{{player.image}}" />
+						</a>
+						
+					</span>
+				</div>
+			</div>
+			<div class="clear"></div>	
+		</div>
+		
+		<div class="box stats">
+			<a href="{{statsHref}}"><h2>Stats</h2></a>
+			<div class="boxinner">
+			</div>
+		</div>
+		
+		<div class="box fixtures">
+			<a href="{{fixturesHref}}"><h2>Fixtures</h2></a>
+			<div class="boxinner">
+				<div ng-repeat="fixture in club.fixtures" >
+					<div class="fix">
+						<a href="{{fixturesHref}}/{{fixture.id}}" title="{{fixture.opp.name}}">
+							<img ng-src="{{fixture.opp.image}}" class="thumb sml" />
+							<span class="info">
+								<label>Opposition: </label>{{fixture.opp.name}} <br />
+								<label>Date: </label>{{fixture.datestr}} <br />
+								<label>Time: </label>{{fixture.timestr}} <br />
+								<label>Location: </label>{{fixture.location}}
+							</span>	
+						</a>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+</div>

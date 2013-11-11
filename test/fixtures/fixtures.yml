@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  location: MyString
+  date: 2013-10-28 18:00:47
+  time: 2013-10-28 18:00:47
+  clubid: 1
+  oppid: 1
+  home: 1
+
+two:
+  location: MyString
+  date: 2013-10-28 18:00:47
+  time: 2013-10-28 18:00:47
+  clubid: 1
+  oppid: 1
+  home: 1

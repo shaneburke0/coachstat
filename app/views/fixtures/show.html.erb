@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Location:</b>
+  <%= @fixture.location %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @fixture.date %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @fixture.time %>
+</p>
+
+<p>
+  <b>Clubid:</b>
+  <%= @fixture.clubid %>
+</p>
+
+<p>
+  <b>Oppid:</b>
+  <%= @fixture.oppid %>
+</p>
+
+<p>
+  <b>Home:</b>
+  <%= @fixture.home %>
+</p>
+
+
+<%= link_to 'Edit', edit_fixture_path(@fixture) %> |
+<%= link_to 'Back', fixtures_path %>

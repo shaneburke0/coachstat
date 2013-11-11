@@ -1,0 +1,12 @@
+<div ng-controller="ClubsCtrl">	
+	<div ng-repeat="club in clubs" class="clubs">
+		<a href="/#/clubs/{{club.id}}" title="{{club.name}}">
+			<img ng-src="{{club.image}}" class="thumb med" title="{{club.name}}" />
+		</a>
+		<div class="info">
+			<h3><a href="/#/clubs/{{club.id}}" title="{{club.name}}">{{club.name}}</a></h3>
+			<div>Players: {{club.players.length}}</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>

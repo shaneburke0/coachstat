@@ -1,0 +1,14 @@
+<div ng-repeat="fixture in club.fixtures" >
+	<div class="fix">
+		<a href="{{fixture.href}}">
+			<img ng-src="{{fixture.opp.image}}" class="thumb sml" />
+		</a>
+		
+		<div class="info">
+			<label>Opposition: </label>{{fixture.opp.name}} <br />
+			<label>Date: </label>{{fixture.datestr}} <br />
+			<label>Time: </label>{{fixture.timestr}} <br />
+			<label>Location: </label>{{fixture.location}}
+		</div>
+	</div>
+</div>
