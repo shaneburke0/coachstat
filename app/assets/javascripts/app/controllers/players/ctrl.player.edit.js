@@ -26,7 +26,7 @@ coachStatControllers.controller('PlayerEditCtrl', ['$scope', '$http', '$log', '$
                 url: '/players/' + _player.id,
                 method: "PUT",
                 data: json,
-                headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}
+                headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*', 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')}
             }).success(function (data, status, headers, config) {
                 $log.info(data, status, headers, config);
             }).error(function (data, status, headers, config) {
