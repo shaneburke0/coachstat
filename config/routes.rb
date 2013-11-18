@@ -1,11 +1,7 @@
 Coachstat::Application.routes.draw do
   
   resources :lineupplayers
-
-
   resources :lineups
-
-
   resources :fixtures
   resources :players
   resources :clubs

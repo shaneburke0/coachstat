@@ -1,0 +1,27 @@
+<div ng-controller="ClubNewCtrl" class="">	
+	<div class="">
+		<h1>Create new club</h1>
+		<div>
+			<label>Name: </label> 
+			<input ng-model="club.name" />
+		</div>
+		<div>
+			<label>Location: </label> 
+			<input ng-model="club.location" />
+		</div>
+		<div>
+			<label>Type: </label> 
+			<input ng-model="club.type" />
+		</div>
+		<div>
+			<label>Image URL: </label>
+			<input ng-model="club.image" />
+			
+			<input type="hidden" ng-model="club.profileid" />
+		</div>
+		<div>
+			<button ng-model="cancel()">Cancel</button>
+			<button ng-model="create(club)">Create</button>	
+		</div>
+	</div>
+</div>

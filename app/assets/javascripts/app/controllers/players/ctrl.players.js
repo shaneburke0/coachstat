@@ -1,6 +1,6 @@
 coachStatControllers.controller('PlayersCtrl', ['$scope', '$http', '$log', '$routeParams', '$rootScope', 
 	function($scope, $http, $log, $routeParams, $rootScope) {
-
+	$scope.baseHref = '/#/clubs/' + $routeParams.clubId +'/players';
 	$scope.club = new ModelClub({});
 	$http({ method: 'GET', url: '/clubs/' + $routeParams.clubId, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
 		.success(function(data, status, headers, config) {

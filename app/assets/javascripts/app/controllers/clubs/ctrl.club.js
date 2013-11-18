@@ -3,6 +3,7 @@ coachStatControllers.controller('ClubCtrl', ['$scope', '$http', '$log', '$routeP
 	
 	$scope.club = new ModelClub({});
 	var baseHref = '/#/clubs/' + $routeParams.clubId;
+	$scope.baseHref = baseHref;
 	$scope.detailsHref = baseHref + '/details';
 	$scope.playersHref = baseHref + '/players';
 	$scope.statsHref = baseHref + '/stats';

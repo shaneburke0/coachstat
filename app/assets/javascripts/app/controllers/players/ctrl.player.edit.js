@@ -34,6 +34,21 @@ coachStatControllers.controller('PlayerEditCtrl', ['$scope', '$http', '$log', '$
             });
     };
     
+    $scope.delPlayer = function() {
+    	if(confirm("Are you sure?")) {
+    		$http({
+                url: '/players/' + $routeParams.playerId,
+                method: "DELETE",
+                headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*', 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')}
+            }).success(function (data, status, headers, config) {
+                $log.info(data, status, headers, config);
+                // todo: redirect page
+            }).error(function (data, status, headers, config) {
+                $log(data, status, headers, config);
+            });
+    	}
+    };
+    
     $scope.cancel = function() {
     	$location.path($scope.baseHref);
     };

@@ -20,9 +20,17 @@ coachStat.config(['$routeProvider',
         templateUrl: '/assets/app/views/club/details.html',
         controller: 'ClubDetailsCtrl'
       }).
+      when('/clubs/:clubId/edit', {
+        templateUrl: '/assets/app/views/club/edit.html',
+        controller: 'ClubEditCtrl'
+      }).
       when('/clubs/:clubId/players', {
         templateUrl: '/assets/app/views/players/players.html',
         controller: 'PlayersCtrl'
+      }).
+      when('/clubs/:clubId/players/add', {
+        templateUrl: '/assets/app/views/players/add.html',
+        controller: 'PlayerNewCtrl'
       }).
       when('/clubs/:clubId/players/:playerId', {
         templateUrl: '/assets/app/views/players/player.html',

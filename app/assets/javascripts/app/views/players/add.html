@@ -1,5 +1,4 @@
-<div ng-controller="PlayerCtrl">
-	<div><img ng-src="{{player.image}}"/></div>
+<div ng-controller="PlayerNewCtrl">
 	<div>
 		<label>First name:</label>
 		<input ng-model="player.firstName"/>
@@ -25,8 +24,11 @@
 		<input ng-model="player.dob"/>
 	</div>
 	<div>
+		<input type="hidden" ng-model="player.clubid"/>
+		<input type="hidden" ng-model="player.clubname"/>
+	</div>
+	<div>
 		<button ng-click="cancel()">Cancel</button>
-		<button ng-click="delPlayer()">Delete</button>
 		<button ng-click="save(player)">Save</button>
 	</div>
 </div>

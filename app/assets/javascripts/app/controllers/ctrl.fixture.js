@@ -85,7 +85,7 @@ coachStatControllers.controller('FixtureCtrl', ['$scope', '$http', '$log', '$rou
 		});
 	}
 	function loadPlayer(id) {
-		$http({ method: 'GET', url: '/clubs/' + $routeParams.clubId +'/player/' + id, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
+		$http({ method: 'GET', url: '/clubs/' + $routeParams.clubId +'/players/' + id, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
 		.success(function(data, status, headers, config) {
 			for(var i=0; i<$scope.club.fixtures[0].lineup.players.length; i++) {
 				if(data.id == $scope.club.fixtures[0].lineup.players[i].playerid) {
