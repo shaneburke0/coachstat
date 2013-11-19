@@ -11,7 +11,10 @@
 		</div>
 		<div>
 			<label>Type: </label> 
-			<input ng-model="club.type" />
+			<select ng-model="club.club_type">
+				<option value="1">Soccer</option>
+				<option value="2">Gaelic Football</option>
+			</select>
 		</div>
 		<div>
 			<label>Image URL: </label>
@@ -20,8 +23,8 @@
 			<input type="hidden" ng-model="club.profileid" />
 		</div>
 		<div>
-			<button ng-model="cancel()">Cancel</button>
-			<button ng-model="create(club)">Create</button>	
+			<button ng-click="cancel()">Cancel</button>
+			<button ng-click="create(club)">Create</button>	
 		</div>
 	</div>
 </div>

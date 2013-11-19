@@ -1,20 +1,29 @@
-coachStatControllers.controller('ClubDetailsCtrl', ['$scope', '$http', '$log', '$routeParams', '$rootScope',
-	function($scope, $http, $log, $routeParams, $rootScope) {
+coachStatControllers.controller('ClubNewCtrl', ['$scope', '$http', '$log', '$routeParams', '$rootScope', '$location',
+	function($scope, $http, $log, $routeParams, $rootScope, $location) {
 	$scope.club = new ModelClub({});
-	$http({ method: 'GET', url: '/clubs/' + $routeParams.clubId, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
-		.success(function(data, status, headers, config) {
-			$log.log(data, status, headers, config);
-				var club = new ModelClub({id: data.id, name: data.name, club_type: data.club_type, location: data.location, image: data.image });
-				$scope.club = club;
-				createBreadcrumb();
-		})
-		.error(function(data, status, headers, config) { 
-			$log.warn(data, status, headers, config);
-		});
-	function createBreadcrumb() {
+	$scope.baseHref = '/clubs/';
+
 		$rootScope.path = [{ label: 'Home', url: '#/'},
             		   { label: 'Clubs', url: '#/clubs'},
-            		   { label: $scope.club.name, url: '#/clubs/' + $scope.club.id},
-            		   { label: 'Details', url: '#/clubs/' + $scope.club.id + '/details', isActive: 'active' }];
-	}
+            		   { label: 'New', url: '#/clubs/add', isActive: 'active' }];
+	
+	$scope.create = function(_club) {
+		var json = JSON.stringify(_club);
+        $http({
+                url: '/clubs/',
+                method: "POST",
+                data: json,
+                headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*', 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')}
+            }).success(function (data, status, headers, config) {
+                $log.info(data, status, headers, config);
+                $location.path($scope.baseHref + data.id);
+            }).error(function (data, status, headers, config) {
+                $log(data, status, headers, config);
+            });
+	};
+	
+	
+	$scope.cancel = function() {
+		$location.path($scope.baseHref);
+	};
 }]);

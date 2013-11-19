@@ -2,6 +2,7 @@ coachStatControllers.controller('FixtureCtrl', ['$scope', '$http', '$log', '$rou
 	function($scope, $http, $log, $routeParams, $rootScope) {
 	
 	$scope.club = new ModelClub({});
+	$scope.editHref = '#/clubs/' + $scope.club.id + '/fixtures/' + $routeParams.fixtureId + '/edit';
 
 	$http({ method: 'GET', url: '/clubs/' + $routeParams.clubId, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
 		.success(function(data, status, headers, config) {

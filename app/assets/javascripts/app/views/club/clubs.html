@@ -1,4 +1,5 @@
 <div ng-controller="ClubsCtrl">	
+	<a href="/#/clubs/add">Create new club</a>
 	<div ng-repeat="club in clubs" class="clubs">
 		<a href="/#/clubs/{{club.id}}" title="{{club.name}}">
 			<img ng-src="{{club.image}}" class="thumb med" title="{{club.name}}" />
