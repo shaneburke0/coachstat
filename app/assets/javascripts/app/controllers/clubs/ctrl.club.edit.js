@@ -1,7 +1,7 @@
-coachStatControllers.controller('ClubEditCtrl', ['$scope', '$http', '$log', '$routeParams', '$rootScope',
-	function($scope, $http, $log, $routeParams, $rootScope) {
+coachStatControllers.controller('ClubEditCtrl', ['$scope', '$http', '$log', '$routeParams', '$rootScope', '$location',
+	function($scope, $http, $log, $routeParams, $rootScope, $location) {
 	$scope.club = new ModelClub({});
-	$scope.baseHref = '/clubs/';
+	$scope.baseHref = '/clubs/' + $routeParams.clubId + '/details';
 	$http({ method: 'GET', url: '/clubs/' + $routeParams.clubId, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
 		.success(function(data, status, headers, config) {
 			$log.log(data, status, headers, config);
@@ -16,11 +16,12 @@ coachStatControllers.controller('ClubEditCtrl', ['$scope', '$http', '$log', '$ro
 		$rootScope.path = [{ label: 'Home', url: '#/'},
             		   { label: 'Clubs', url: '#/clubs'},
             		   { label: $scope.club.name, url: '#/clubs/' + $scope.club.id},
-            		   { label: 'Details', url: '#/clubs/' + $scope.club.id + '/details', isActive: 'active' }];
+            		   { label: 'Details', url: '#/clubs/' + $scope.club.id + '/details' },
+            		   { label: 'Edit', url: '#/clubs/' + $scope.club.id + '/edit', isActive: 'active' }];
 	}
 	
 	$scope.save = function(_club) {
-		var json = JSON.stringify(_club.id);
+		var json = JSON.stringify(_club);
         $http({
                 url: '/clubs/' + _club.id,
                 method: "PUT",
@@ -28,6 +29,7 @@ coachStatControllers.controller('ClubEditCtrl', ['$scope', '$http', '$log', '$ro
                 headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*', 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')}
             }).success(function (data, status, headers, config) {
                 $log.info(data, status, headers, config);
+                $location.path($scope.baseHref);
             }).error(function (data, status, headers, config) {
                 $log(data, status, headers, config);
             });
@@ -41,6 +43,7 @@ coachStatControllers.controller('ClubEditCtrl', ['$scope', '$http', '$log', '$ro
                 headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*', 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')}
             }).success(function (data, status, headers, config) {
                 $log.info(data, status, headers, config);
+                $location.path('/clubs/');
                 // todo: redirect page
             }).error(function (data, status, headers, config) {
                 $log(data, status, headers, config);

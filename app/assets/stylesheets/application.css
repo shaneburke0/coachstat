@@ -209,6 +209,10 @@ a:hover {
 .club .box.lrg {
 	width: 400px;
 }
+
+.club .box.exlrg {
+	width: 600px;
+}
 .clubs {
 	margin-right: 100px;
 	display: inline-block;

@@ -21,6 +21,7 @@ coachStatControllers.controller('PlayerNewCtrl', ['$scope', '$http', '$log', '$r
                 headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*', 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')}
             }).success(function (data, status, headers, config) {
                 $log.info(data, status, headers, config);
+                $location.path($scope.baseHref + data.id);
             }).error(function (data, status, headers, config) {
                 $log(data, status, headers, config);
             });

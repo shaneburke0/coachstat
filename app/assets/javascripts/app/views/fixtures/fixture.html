@@ -1,22 +1,27 @@
 <div ng-repeat="fixture in club.fixtures" >
-	<div class="fix">
+	<div class="fix club">
+		
+		<div class="box details">
+			<a href=""><h2>Details</h2></a>
+			<a href="{{editHref}}">Edit</a>
 			<img ng-src="{{fixture.opp.image}}" class="thumb sml" />
 		
-		<div class="info">
-			<label>Opposition: </label>{{fixture.opp.name}} <br />
-			<label>Date: </label>{{fixture.datestr}} <br />
-			<label>Time: </label>{{fixture.timestr}} <br />
-			<label>Location: </label>{{fixture.location}} <br />
-			
+			<div class="info">
+				<label>Opposition: </label>{{fixture.opp.name}} <br />
+				<label>Date: </label>{{fixture.datestr}} <br />
+				<label>Time: </label>{{fixture.timestr}} <br />
+				<label>Location: </label>{{fixture.location}} <br />
+			</div>
+		</div>
+		
+		<div class="box exlrg">
+			<a href=""><h2>Formation</h2></a>
 			<div class="formation">
 				<img ng-repeat="player in fixture.lineup.players" class="thumb draggable-player ui-widget-content" ng-src="{{player.prototype.image}}" title="{{player.prototype.firstName}} {{player.prototype.lastName}}" style="{{player.position}}" />
 
 				<div id="drop-pitch" class="pitch"></div>
 			</div>
 		</div>
-		
-		
-			
-			
+	
 	</div>
 </div>
