@@ -1,96 +1,37 @@
-coachStatControllers.controller('FixtureEditCtrl', ['$scope', '$http', '$log', '$routeParams', '$rootScope',
-	function($scope, $http, $log, $routeParams, $rootScope) {
+coachStatControllers.controller('FixtureEditCtrl', ['$scope', '$http', '$log', '$routeParams', '$rootScope', '$location',
+	function($scope, $http, $log, $routeParams, $rootScope, $location) {
 	
-	$scope.club = new ModelClub({});
-
-	$http({ method: 'GET', url: '/clubs/' + $routeParams.clubId, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
-		.success(function(data, status, headers, config) {
-			var club = new ModelClub({id: data.id, name: data.name, club_type: data.club_type, location: data.location, image: data.image });
-			$scope.club = club;
-			loadFixture();
-			
-		})
-		.error(function(data, status, headers, config) { 
-			$log.warn(data, status, headers, config);
-		});
+	$scope.fixture = new ModelFixture({});
+	$scope.baseHref = '#/clubs/' + $routeParams.clubId + '/fixtures/' + $routeParams.fixtureId;
+	$scope.clubs = [];
+	
 	function createBreadcrumb() {
 		$rootScope.path = [{ label: 'Home', url: '#/'},
             		   { label: 'Clubs', url: '#/clubs'},
-            		   { label: $scope.club.name, url: '#/clubs/' + $scope.club.id},
-            		   { label: 'Fixtures', url: '#/clubs/' + $scope.club.id + '/fixtures',},
-            		   { label: $scope.club.fixtures[0].opp.name, url: '#/clubs/' + $scope.club.id + '/fixtures', isActive: 'active' }];
+            		   { label: 'club name here', url: '#/clubs/' + $routeParams.clubId},
+            		   { label: 'Fixtures', url: '#/clubs/' + $routeParams.clubId + '/fixtures',},
+            		   { label: 'Edit', url: '#/clubs/' + $routeParams.clubId + '/fixtures/' + $routeParams.fixtureId + '/edit', isActive: 'active' }];
 	}
-	function loadFixture() {
-		$http({ method: 'GET', url: '/clubs/' + $routeParams.clubId + '/fixture/' + $routeParams.fixtureId, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
+	
+	$http({ method: 'GET', url: '/clubs/' + $routeParams.clubId + '/fixture/' + $routeParams.fixtureId, 
+		headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
 		.success(function(data, status, headers, config) {
 				
 				var fixture = new ModelFixture({ location: data.location, date: data.date, time: data.time, clubid: data.clubid, oppid: data.oppid, id: data.id });
 				
-				$scope.club.fixtures.push(fixture);
-				loadOppClub(fixture.id, fixture.oppid);
-				$log.log('called loadOppClub with: ' + fixture.id + ' & ' + fixture.oppid);
-				
-				loadLineup(fixture.id);
+				$scope.fixture = fixture;
+				loadClubs();
 		})
 		.error(function(data, status, headers, config) { 
 			$log.warn(data, status, headers, config);
 		});
-	}
-	
 		
-	function loadOppClub(id, oppid) {
-		$http({ method: 'GET', url: '/clubs/' + oppid, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
+	function loadClubs() {
+		$http({ method: 'GET', url: '/clubs.json', headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
 		.success(function(data, status, headers, config) {
-				
-			var club = new ModelClub({id: data.id, name: data.name, club_type: data.club_type, location: data.location, image: data.image });
-			$log.log($scope.club);
-		
-			for(var j=0; j<$scope.club.fixtures.length; j++) {
-				if($scope.club.fixtures[j].id == id) {
-					$scope.club.fixtures[j].opp = club;
-					$log.log($scope.club.fixtures);
-				}
-			}
-			createBreadcrumb();
-		})
-		.error(function(data, status, headers, config) { 
-			$log.warn(data, status, headers, config);
-		});
-	}
-	
-	function loadLineup(id) {
-		$http({ method: 'GET', url: '/lineups/' + id, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
-		.success(function(data, status, headers, config) {
-			var lineup = new ModelLineup({id: data.id, clubid: data.clubid, fixtureid: data.fixtureid });
-			$scope.club.fixtures[0].lineup = lineup;
-			loadLineupPlayers(lineup.id);
-		})
-		.error(function(data, status, headers, config) { 
-			$log.warn(data, status, headers, config);
-		});
-	}
-	
-	function loadLineupPlayers(id) {
-		$http({ method: 'GET', url: '/lineupplayers/' + id + '/lineup', headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
-		.success(function(data, status, headers, config) {
-			for(var i = 0; i < data.length; i++) {
-				var lineupPlayer = new ModelLineupPlayer({player: {}, captain: data[i].captain, position: data[i].position, playerid: data[i].playerid});
-				$scope.club.fixtures[0].lineup.players.push(lineupPlayer);
-				loadPlayer(data[i].playerid);
-			}
-			window.setTimeout(initDragFormation, 4000);
-		})
-		.error(function(data, status, headers, config) { 
-			$log.warn(data, status, headers, config);
-		});
-	}
-	function loadPlayer(id) {
-		$http({ method: 'GET', url: '/clubs/' + $routeParams.clubId +'/players/' + id, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
-		.success(function(data, status, headers, config) {
-			for(var i=0; i<$scope.club.fixtures[0].lineup.players.length; i++) {
-				if(data.id == $scope.club.fixtures[0].lineup.players[i].playerid) {
-					$scope.club.fixtures[0].lineup.players[i].prototype = new ModelPlayer({id: data.id, firstName: data.firstName, lastName: data.lastName, dob: data.dob, position: data.position, height: data.height, weight: data.weight, image: data.image, clubname: data.clubname});
-				}
+			for(var i =0; i < data.length; i++) {
+				var club = new ModelClub({id: data[i].id, name: data[i].name, club_type: data[i].club_type, location: data[i].location, image: data[i].image });
+				$scope.clubs.push(club);
 			}
 		})
 		.error(function(data, status, headers, config) { 
@@ -98,4 +39,39 @@ coachStatControllers.controller('FixtureEditCtrl', ['$scope', '$http', '$log', '
 		});
 	}
 	
+	$scope.save = function(_fixture) {
+		var json = JSON.stringify(_fixture);
+        $http({
+                url: '/fixtures/' + _fixture.id,
+                method: "PUT",
+                data: json,
+                headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*', 
+                'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')}
+            }).success(function (data, status, headers, config) {
+                $log.info(data, status, headers, config);
+                $location.path($scope.baseHref);
+            }).error(function (data, status, headers, config) {
+                $log.warn(data, status, headers, config);
+            });
+	};
+	
+	$scope.deleteFixture = function() {
+		if(confirm("Are you sure?")) {
+    		$http({
+                url: '/fixtures/' + $routeParams.fixtureId,
+                method: "DELETE",
+                headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*', 
+                'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')}
+            }).success(function (data, status, headers, config) {
+                $log.info(data, status, headers, config);
+                $location.path('#/clubs/' + $routeParams.clubId + '/fixtures');
+            }).error(function (data, status, headers, config) {
+                $log.warn(data, status, headers, config);
+            });
+    	}
+	};
+	
+	$scope.cancel = function() {
+		$location.path($scope.baseHref);
+	};
 }]);

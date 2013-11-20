@@ -31,7 +31,7 @@ coachStatControllers.controller('ClubEditCtrl', ['$scope', '$http', '$log', '$ro
                 $log.info(data, status, headers, config);
                 $location.path($scope.baseHref);
             }).error(function (data, status, headers, config) {
-                $log(data, status, headers, config);
+                $log.warn(data, status, headers, config);
             });
 	};
 	
@@ -44,9 +44,8 @@ coachStatControllers.controller('ClubEditCtrl', ['$scope', '$http', '$log', '$ro
             }).success(function (data, status, headers, config) {
                 $log.info(data, status, headers, config);
                 $location.path('/clubs/');
-                // todo: redirect page
             }).error(function (data, status, headers, config) {
-                $log(data, status, headers, config);
+                $log.warn(data, status, headers, config);
             });
     	}
 	};
