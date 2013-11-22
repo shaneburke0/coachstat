@@ -2,7 +2,7 @@ coachStatControllers.controller('FixtureEditCtrl', ['$scope', '$http', '$log', '
 	function($scope, $http, $log, $routeParams, $rootScope, $location) {
 	
 	$scope.fixture = new ModelFixture({});
-	$scope.baseHref = '#/clubs/' + $routeParams.clubId + '/fixtures/' + $routeParams.fixtureId;
+	$scope.baseHref = '/#/clubs/' + $routeParams.clubId + '/fixtures/' + $routeParams.fixtureId;
 	$scope.clubs = [];
 	
 	function createBreadcrumb() {
