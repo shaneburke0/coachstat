@@ -29,6 +29,14 @@ class LineupplayersController < ApplicationController
       format.json { render json: @lineupplayer }
     end
   end
+  
+  def getPlayer
+    @lineupplayer = Lineupplayer.where('lineupid' => params[:id], 'playerid' => params[:playerid])
+
+    respond_to do |format|
+      format.json { render json: @lineupplayer }
+    end
+  end
 
   # GET /lineupplayers/new
   # GET /lineupplayers/new.json

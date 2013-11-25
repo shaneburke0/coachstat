@@ -353,3 +353,19 @@ nav#menu #menu-nav li a:hover {
 	right: 20px;
 	top: 27px;
 }
+
+.formation-list {
+	width: 400px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.formation-list.left {
+	margin-right: 50px;
+}
+
+.formation-list .inline {
+	width: 200px;
+	display: inline-block;
+}
+}

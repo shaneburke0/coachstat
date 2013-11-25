@@ -16,6 +16,7 @@
 		
 		<div class="box exlrg">
 			<a href=""><h2>Formation</h2></a>
+			<a class="inline right" href="{{editFormationHref}}">Edit</a>
 			<div class="formation">
 				<img ng-repeat="player in fixture.lineup.players" class="thumb draggable-player ui-widget-content" ng-src="{{player.prototype.image}}" title="{{player.prototype.firstName}} {{player.prototype.lastName}}" style="{{player.position}}" />
 

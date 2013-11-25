@@ -2,8 +2,9 @@ coachStatControllers.controller('FixtureCtrl', ['$scope', '$http', '$log', '$rou
 	function($scope, $http, $log, $routeParams, $rootScope) {
 	
 	$scope.club = new ModelClub({});
-	$scope.editHref = '#/clubs/' + $scope.club.id + '/fixtures/' + $routeParams.fixtureId + '/edit';
-
+	$scope.editHref = '#/clubs/' + $routeParams.clubId + '/fixtures/' + $routeParams.fixtureId + '/edit';
+	$scope.editFormationHref = '#/clubs/' + $routeParams.clubId + '/fixtures/' + $routeParams.fixtureId + '/formation/edit';
+	
 	$http({ method: 'GET', url: '/clubs/' + $routeParams.clubId, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
 		.success(function(data, status, headers, config) {
 			var club = new ModelClub({id: data.id, name: data.name, club_type: data.club_type, location: data.location, image: data.image });
