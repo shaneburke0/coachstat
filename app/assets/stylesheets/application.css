@@ -369,3 +369,8 @@ nav#menu #menu-nav li a:hover {
 	display: inline-block;
 }
 }
+
+.logs {
+	width: 90%;
+	margin-left: 10px;
+}
