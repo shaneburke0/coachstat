@@ -7,7 +7,8 @@ gem 'devise', '2.1.2'
 
 group :development, :test do 
  gem 'sqlite3' 
-end 
+end
+
 group :production do 
  gem 'pg' 
 end 
