@@ -29,6 +29,46 @@
 			</div>
 			<button ng-click="saveFormation()">Save Formation</button>
 		</div>
-	
+		
+		<div class="box exlrg">
+			<h2>Stats</h2>
+			<a class="inline right" href="{{editStatsHref}}" >Edit</a>
+			<table class="stats">
+				<thead>
+					<tr class="head">
+						<th>Player</th>
+						<th>Mins</th>
+						<th>Goals</th>
+						<th>Assists</th>
+						<th>Shots Target</th>
+						<th>Shots Wide</th>
+						<th>Pass Success</th>
+						<th>Pass Missed</th>
+						<th>Tackles Won</th>
+						<th>Tackles Lost</th>
+						<th>OG</th>
+						<th>YC</th>
+						<th>RC</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="player in fixture.lineup.players" ng-class-odd="'odd'" ng-class-even="'even'">
+						<td>{{player.prototype.firstName}} {{player.prototype.lastName}}</td>
+						<td>{{player.stats.mins}}</td>
+						<td>{{player.stats.goals}}</td>
+						<td>{{player.stats.assists}}</td>
+						<td>{{player.stats.shotstarget}}</td>
+						<td>{{player.stats.shotswide}}</td>	
+						<td>{{player.stats.passsuccess}}</td>
+						<td>{{player.stats.passmissed}}</td>
+						<td>{{player.stats.tackleswon}}</td>
+						<td>{{player.stats.tackleslost}}</td>
+						<td>{{player.stats.og}}</td>
+						<td>{{player.stats.yc}}</td>
+						<td>{{player.stats.rc}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 </div>

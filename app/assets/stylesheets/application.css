@@ -387,3 +387,25 @@ nav#menu #menu-nav li a:hover {
 	width: 90%;
 	margin-left: 10px;
 }
+
+table.stats {
+	text-align: center;
+}
+
+table.stats tr.head {
+	background-color: #DE5E60;
+	color: #fff;
+}
+
+table.stats.edit tr th, table.stats.edit tr td {
+	padding: 5px 10px;
+}
+
+table.stats tr.even {
+	background-color: #929496;
+	color: #000;
+}
+
+table.stats input {
+	width: 30px;
+}

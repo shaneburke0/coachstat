@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131107202205) do
+ActiveRecord::Schema.define(:version => 20131202141406) do
 
   create_table "clubs", :force => true do |t|
     t.string   "name"
@@ -33,6 +33,25 @@ ActiveRecord::Schema.define(:version => 20131107202205) do
     t.integer  "home"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "fixturestats", :force => true do |t|
+    t.integer  "mins"
+    t.integer  "goals"
+    t.integer  "assists"
+    t.integer  "shotstarget"
+    t.integer  "shotswide"
+    t.integer  "passsuccess"
+    t.integer  "passmissed"
+    t.integer  "tackleswon"
+    t.integer  "tackleslost"
+    t.integer  "og"
+    t.integer  "yc"
+    t.integer  "rc"
+    t.integer  "fixtureid"
+    t.integer  "playerid"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "lineupplayers", :force => true do |t|

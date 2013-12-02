@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  mins: 1
+  goals: 1
+  assists: 1
+  shotstarget: 1
+  shotswide: 1
+  passsuccess: 1
+  passmissed: 1
+  tackleswom: 1
+  tackleslost: 1
+  og: 1
+  yc: 1
+  rc: 1
+  fixtureid: 1
+  playerid: 1
+
+two:
+  mins: 1
+  goals: 1
+  assists: 1
+  shotstarget: 1
+  shotswide: 1
+  passsuccess: 1
+  passmissed: 1
+  tackleswom: 1
+  tackleslost: 1
+  og: 1
+  yc: 1
+  rc: 1
+  fixtureid: 1
+  playerid: 1

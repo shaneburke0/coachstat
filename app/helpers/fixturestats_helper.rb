@@ -1,0 +1,2 @@
+module FixturestatsHelper
+end

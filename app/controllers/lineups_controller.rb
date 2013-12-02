@@ -80,4 +80,13 @@ class LineupsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def getFixtureLineup
+    @lineup = Lineup.where('fixtureid' => params[:fixtureid]).last
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @lineup }
+    end
+  end
 end
