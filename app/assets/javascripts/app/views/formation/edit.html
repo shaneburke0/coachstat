@@ -3,7 +3,7 @@
 	
 	<div class="formation-list left">
 		<h3>Squad</h3>
-		<div class="inline" ng-repeat="sqplayer in squad">
+		<div class="inline player" ng-repeat="sqplayer in squad">
 			<img  class="thumb" ng-src="{{sqplayer.image}}" 
 				title="{{sqplayer.firstName}} {{sqplayer.lastName}}" />
 			{{sqplayer.firstName}} {{sqplayer.lastName}}
@@ -14,7 +14,7 @@
 	
 	<div class="formation-list">
 		<h3>Lineup</h3>
-		<div class="inline" ng-repeat="player in lineup.players">
+		<div class="inline player" ng-repeat="player in lineup.players">
 			<img  class="thumb" ng-src="{{player.prototype.image}}" 
 				title="{{player.prototype.firstName}} {{player.prototype.lastName}}" />
 			{{player.prototype.firstName}} {{player.prototype.lastName}}

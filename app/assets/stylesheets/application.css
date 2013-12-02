@@ -297,9 +297,14 @@ nav#menu #menu-nav li a:hover {
 }
 
 .formation .pitch {
-	background: transparent url("/assets/pitches/soccer.png") no-repeat 0px 0px;
-	height: 372px;
+	background: transparent url("/assets/pitches/soccer.png") no-repeat left bottom;
+	height: 432px;
 	width: 594px;
+}
+
+.formation .subs {
+	border: 1px solid #fff;
+	height: 50px;
 }
 
 /*TILT*/
@@ -365,9 +370,17 @@ nav#menu #menu-nav li a:hover {
 }
 
 .formation-list .inline {
-	width: 200px;
-	display: inline-block;
+	display: inline-block;	
 }
+
+.formation-list .player {
+	padding-bottom: 20px;
+	width: 133px;
+}
+
+.formation-list .player img,
+.formation-list .player button {
+	display: block;
 }
 
 .logs {
