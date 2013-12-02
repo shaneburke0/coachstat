@@ -4,7 +4,7 @@ coachStatControllers.controller('FixtureCtrl', ['$scope', '$http', '$log', '$rou
 	$scope.club = new ModelClub({});
 	$scope.editHref = '#/clubs/' + $routeParams.clubId + '/fixtures/' + $routeParams.fixtureId + '/edit';
 	$scope.editFormationHref = '#/clubs/' + $routeParams.clubId + '/fixtures/' + $routeParams.fixtureId + '/formation/edit';
-	
+	var _lineupId = 0;
 	$http({ method: 'GET', url: '/clubs/' + $routeParams.clubId, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
 		.success(function(data, status, headers, config) {
 			var club = new ModelClub({id: data.id, name: data.name, club_type: data.club_type, location: data.location, image: data.image });
@@ -30,7 +30,6 @@ coachStatControllers.controller('FixtureCtrl', ['$scope', '$http', '$log', '$rou
 				
 				$scope.club.fixtures.push(fixture);
 				loadOppClub(fixture.id, fixture.oppid);
-				$log.log('called loadOppClub with: ' + fixture.id + ' & ' + fixture.oppid);
 				
 				loadLineup(fixture.id);
 		})
@@ -50,7 +49,6 @@ coachStatControllers.controller('FixtureCtrl', ['$scope', '$http', '$log', '$rou
 			for(var j=0; j<$scope.club.fixtures.length; j++) {
 				if($scope.club.fixtures[j].id == id) {
 					$scope.club.fixtures[j].opp = club;
-					$log.log($scope.club.fixtures);
 				}
 			}
 			createBreadcrumb();
@@ -66,6 +64,7 @@ coachStatControllers.controller('FixtureCtrl', ['$scope', '$http', '$log', '$rou
 			var lineup = new ModelLineup({id: data.id, clubid: data.clubid, fixtureid: data.fixtureid });
 			$scope.club.fixtures[0].lineup = lineup;
 			loadLineupPlayers(lineup.id);
+			_lineupId = lineup.id;
 		})
 		.error(function(data, status, headers, config) { 
 			$log.warn(data, status, headers, config);
@@ -76,7 +75,7 @@ coachStatControllers.controller('FixtureCtrl', ['$scope', '$http', '$log', '$rou
 		$http({ method: 'GET', url: '/lineupplayers/' + id + '/lineup', headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
 		.success(function(data, status, headers, config) {
 			for(var i = 0; i < data.length; i++) {
-				var lineupPlayer = new ModelLineupPlayer({player: {}, captain: data[i].captain, position: data[i].position, playerid: data[i].playerid});
+				var lineupPlayer = new ModelLineupPlayer({player: {}, captain: data[i].captain, position: data[i].position, playerid: data[i].playerid, id: data[i].id});
 				$scope.club.fixtures[0].lineup.players.push(lineupPlayer);
 				loadPlayer(data[i].playerid);
 			}
@@ -109,5 +108,40 @@ coachStatControllers.controller('FixtureCtrl', ['$scope', '$http', '$log', '$rou
 			}
 		});
 	}
+	
+	$scope.saveFormation = function() {
+		var leanArray = [];
+		for(var i=0; i<$scope.club.fixtures[0].lineup.players.length; i++) {
+			var playerElm =  $("#" + $scope.club.fixtures[0].lineup.players[i].prototype.id);
+			var left = "left:" + $(playerElm).css("left") + ";";
+			var top = "top:" + $(playerElm).css("top") + ";";
+			var position = "position: relavtive;";
+			
+			
+			var leanPlayer = new ModelLeanLineupPlayer({
+				id: $scope.club.fixtures[0].lineup.players[i].id,
+				playerid: $scope.club.fixtures[0].lineup.players[i].playerid,
+				captain: $scope.club.fixtures[0].lineup.players[i].captain,
+				position: position + " " + left + " " + top,
+				lineupid: $scope.club.fixtures[0].lineup.players[i].lineupid,
+				positionid: $scope.club.fixtures[0].lineup.players[i].positionid
+			});	
+			
+			leanArray.push(leanPlayer);
+		}
+		var json = JSON.stringify(leanArray);
+        $http({
+                url: '/lineupplayers/'+ _lineupId + '/updateFormation',
+                method: "PUT",
+                data: {formation: json},
+                headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*', 
+                'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')}
+            }).success(function (data, status, headers, config) {
+                $log.info(data, status, headers, config);
+                
+            }).error(function (data, status, headers, config) {
+                $log.warn(data, status, headers, config);
+            });
+	};
 	
 }]);
