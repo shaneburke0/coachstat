@@ -1,0 +1,38 @@
+<table class="stats edit">
+	<thead>
+		<tr class="head">
+			<th>Player</th>
+			<th>Mins</th>
+			<th>Goals</th>
+			<th>Assists</th>
+			<th>Shots Target</th>
+			<th>Shots Wide</th>
+			<th>Pass Success</th>
+			<th>Pass Missed</th>
+			<th>Tackles Won</th>
+			<th>Tackles Lost</th>
+			<th>OG</th>
+			<th>YC</th>
+			<th>RC</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="player in lineup.players" ng-class-odd="'odd'" ng-class-even="'even'">
+			<td>{{player.prototype.firstName}} {{player.prototype.lastName}}</td>
+			<td><input type="text" ng-model="player.stats.mins" /></td>
+			<td><input type="text" ng-model="player.stats.goals" /></td>
+			<td><input type="text" ng-model="player.stats.assists" /></td>
+			<td><input type="text" ng-model="player.stats.shotstarget" /></td>
+			<td><input type="text" ng-model="player.stats.shotswide" /></td>	
+			<td><input type="text" ng-model="player.stats.passsuccess" /></td>
+			<td><input type="text" ng-model="player.stats.passmissed" /></td>
+			<td><input type="text" ng-model="player.stats.tackleswon" /></td>
+			<td><input type="text" ng-model="player.stats.tackleslost" /></td>
+			<td><input type="text" ng-model="player.stats.og" /></td>
+			<td><input type="text" ng-model="player.stats.yc" /></td>
+			<td><input type="text" ng-model="player.stats.rc" /></td>
+		</tr>
+	</tbody>
+</table>
+<button ng-click="cancel()">Cancel</button>
+<button ng-click="save(lineup.players)">Save</button>

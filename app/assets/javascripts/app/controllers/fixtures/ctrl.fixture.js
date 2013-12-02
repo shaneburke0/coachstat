@@ -4,6 +4,7 @@ coachStatControllers.controller('FixtureCtrl', ['$scope', '$http', '$log', '$rou
 	$scope.club = new ModelClub({});
 	$scope.editHref = '#/clubs/' + $routeParams.clubId + '/fixtures/' + $routeParams.fixtureId + '/edit';
 	$scope.editFormationHref = '#/clubs/' + $routeParams.clubId + '/fixtures/' + $routeParams.fixtureId + '/formation/edit';
+	$scope.editStatsHref = '#/clubs/' + $routeParams.clubId + '/fixtures/' + $routeParams.fixtureId + '/stats/edit';
 	var _lineupId = 0;
 	$http({ method: 'GET', url: '/clubs/' + $routeParams.clubId, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
 		.success(function(data, status, headers, config) {
@@ -59,7 +60,7 @@ coachStatControllers.controller('FixtureCtrl', ['$scope', '$http', '$log', '$rou
 	}
 	
 	function loadLineup(id) {
-		$http({ method: 'GET', url: '/lineups/' + id, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
+		$http({ method: 'GET', url: '/lineups/fixture/' + id, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
 		.success(function(data, status, headers, config) {
 			var lineup = new ModelLineup({id: data.id, clubid: data.clubid, fixtureid: data.fixtureid });
 			$scope.club.fixtures[0].lineup = lineup;
@@ -91,6 +92,7 @@ coachStatControllers.controller('FixtureCtrl', ['$scope', '$http', '$log', '$rou
 			for(var i=0; i<$scope.club.fixtures[0].lineup.players.length; i++) {
 				if(data.id == $scope.club.fixtures[0].lineup.players[i].playerid) {
 					$scope.club.fixtures[0].lineup.players[i].prototype = new ModelPlayer({id: data.id, firstName: data.firstName, lastName: data.lastName, dob: data.dob, position: data.position, height: data.height, weight: data.weight, image: data.image, clubname: data.clubname});
+					loadFixtureStats(id);
 				}
 			}
 		})
@@ -143,5 +145,39 @@ coachStatControllers.controller('FixtureCtrl', ['$scope', '$http', '$log', '$rou
                 $log.warn(data, status, headers, config);
             });
 	};
+	
+	function loadFixtureStats(id) {
+		$http({ method: 'GET', url: '/fixturestats/fixture/' + $routeParams.fixtureId +'/player/' + id, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
+		.success(function(data, status, headers, config) {
+			$log.warn(data, status, headers, config);
+			
+			var stats = new ModelFixtureStats({
+				assists: data.assists, 
+				fixtureid: data.fixtureid, 
+				goals: data.goals,
+				mins: data.mins,
+				og: data.og,
+				passmissed: data.passmissed,
+				passsuccess: data.passsuccess,
+				playerid: data.playerid,
+				rc: data.rc,
+				shotstarget: data.shotstarget,
+				shotswide: data.shotswide,
+				tackleslost: data.tackleslost,
+				tackleswon: data.tackleswon,
+				yc: data.yc
+			});
+			
+			for(var i = 0; i<$scope.club.fixtures[0].lineup.players.length; i++) {
+				if ($scope.club.fixtures[0].lineup.players[i].playerid == stats.playerid) {
+					$scope.club.fixtures[0].lineup.players[i].stats = stats;
+				}
+			}	
+			
+		})
+		.error(function(data, status, headers, config) { 
+			$log.warn(data, status, headers, config);
+		});
+	}
 	
 }]);

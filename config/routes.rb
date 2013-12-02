@@ -1,5 +1,8 @@
 Coachstat::Application.routes.draw do
   
+  resources :fixturestats
+
+
   resources :lineupplayers
   resources :lineups
   resources :fixtures
@@ -17,9 +20,14 @@ Coachstat::Application.routes.draw do
   get '/clubs/:id/players/:playerid', to: 'players#show'
   get '/clubs/:id/fixtures', to: 'fixtures#clubfixtures'
   get '/clubs/:id/fixture/:fixtureid', to: 'fixtures#clubfixture'
+  get '/lineups/fixture/:fixtureid', to: 'lineups#getFixtureLineup'
   get '/lineupplayers/:lineupid/lineup', to: 'lineupplayers#lineup'
   get '/lineupplayers/:id/player/:playerid', to: 'lineupplayers#getPlayer'
   put '/lineupplayers/:id/updateFormation', to: 'lineupplayers#updateFormation'
+  delete '/fixturestats/fixture/:fixtureid/player/:playerid', to: 'fixturestats#deletePlayer'
+  get '/fixturestats/fixture/:fixtureid/player/:playerid', to: 'fixturestats#getPlayer'
+  put '/fixturestats/updateallplayers/:fixtureid', to: 'fixturestats#updateAllPlayers'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

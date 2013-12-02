@@ -1,0 +1,49 @@
+<h1>Listing fixturestats</h1>
+
+<table>
+  <tr>
+    <th>Mins</th>
+    <th>Goals</th>
+    <th>Assists</th>
+    <th>Shots target</th>
+    <th>Shots wide</th>
+    <th>Pass success</th>
+    <th>Pass missed</th>
+    <th>Tackles won</th>
+    <th>Tackles lost</th>
+    <th>Og</th>
+    <th>Yc</th>
+    <th>Rc</th>
+    <th>Fixtureid</th>
+    <th>Playerid</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fixturestats.each do |fixturestat| %>
+  <tr>
+    <td><%= fixturestat.mins %></td>
+    <td><%= fixturestat.goals %></td>
+    <td><%= fixturestat.assists %></td>
+    <td><%= fixturestat.shotstarget %></td>
+    <td><%= fixturestat.shotswide %></td>
+    <td><%= fixturestat.passsuccess %></td>
+    <td><%= fixturestat.passmissed %></td>
+    <td><%= fixturestat.tackleswon %></td>
+    <td><%= fixturestat.tackleslost %></td>
+    <td><%= fixturestat.og %></td>
+    <td><%= fixturestat.yc %></td>
+    <td><%= fixturestat.rc %></td>
+    <td><%= fixturestat.fixtureid %></td>
+    <td><%= fixturestat.playerid %></td>
+    <td><%= link_to 'Show', fixturestat %></td>
+    <td><%= link_to 'Edit', edit_fixturestat_path(fixturestat) %></td>
+    <td><%= link_to 'Destroy', fixturestat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fixturestat', new_fixturestat_path %>
