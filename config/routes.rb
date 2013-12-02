@@ -19,6 +19,7 @@ Coachstat::Application.routes.draw do
   get '/clubs/:id/fixture/:fixtureid', to: 'fixtures#clubfixture'
   get '/lineupplayers/:lineupid/lineup', to: 'lineupplayers#lineup'
   get '/lineupplayers/:id/player/:playerid', to: 'lineupplayers#getPlayer'
+  put '/lineupplayers/:id/updateFormation', to: 'lineupplayers#updateFormation'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

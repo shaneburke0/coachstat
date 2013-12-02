@@ -85,6 +85,20 @@ class LineupplayersController < ApplicationController
       end
     end
   end
+  
+  def updateFormation
+    @players = JSON.parse(params[:formation])
+    
+    respond_to do |format|
+      @players.each do |p|
+        @lineupplayer = Lineupplayer.find(p["id"])
+        @lineupplayer[:position] = p["position"]
+        @lineupplayer.update_attributes(params[:lineupplayer])
+      end
+      
+      format.json { head :no_content }
+    end
+  end
 
   # DELETE /lineupplayers/1
   # DELETE /lineupplayers/1.json
