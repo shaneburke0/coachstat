@@ -56,6 +56,10 @@ coachStat.config(['$routeProvider',
         templateUrl: '/assets/app/views/fixturestats/edit.html',
         controller: 'FixtureStatsEditCtrl'
       }).
+      when('/clubs/:clubId/fixtures/:fixtureId/stats', {
+        templateUrl: '/assets/app/views/fixturestats/view.html',
+        controller: 'FixtureStatsCtrl'
+      }).
       when('/clubs/:clubId/fixtures/:fixtureId/edit', {
         templateUrl: '/assets/app/views/fixtures/edit.html',
         controller: 'FixtureEditCtrl'
