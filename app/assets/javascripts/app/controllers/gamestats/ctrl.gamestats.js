@@ -1,5 +1,5 @@
-coachStatControllers.controller('GameStatsCtrl', ['$scope', '$http', '$log', '$routeParams', '$rootScope',
-	function($scope, $http, $log, $routeParams, $rootScope) {
+coachStatControllers.controller('GameStatsCtrl', ['$scope', '$http', '$log', '$routeParams', '$rootScope', 'HighChartsFactory',
+	function($scope, $http, $log, $routeParams, $rootScope, HighChartsFactory) {
 	$scope.clubstats = [];
 	$scope.club = new ModelClub({});
 	$scope.editHref = '#/clubs/' + $routeParams.clubId + '/fixtures/' + $routeParams.fixtureId + '/edit';
@@ -102,6 +102,7 @@ coachStatControllers.controller('GameStatsCtrl', ['$scope', '$http', '$log', '$r
 				}
 				
 			}
+			createChart();
 		})
 		.error(function(data, status, headers, config) { 
 			$log.warn(data, status, headers, config);
@@ -137,6 +138,98 @@ coachStatControllers.controller('GameStatsCtrl', ['$scope', '$http', '$log', '$r
             }).error(function (data, status, headers, config) {
                 $log.warn(data, status, headers, config);
             });
+	}
+	
+	function createChart() {
+		var chart,
+        categories = ['Clearances', 'Corners', 'Cross success', 'Cross missed', 
+            'Fouls', 'Goals', 'Offsides', 'Pass success', 'Pass missed',
+            'Possession', 'Red cards', 'Yellow cards', 'Shots target', 'Shots wide',
+            'Tackles won', 'Tackles lost'];
+            
+        $('#container').highcharts({
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Game stats'
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: [{
+                categories: categories,
+                reversed: false
+            }, { // mirror axis on right side
+                opposite: true,
+                reversed: false,
+                categories: categories,
+                linkedTo: 0
+            }],
+            yAxis: {
+                title: {
+                    text: null
+                },
+                labels: {
+                    formatter: function(){
+                        return (Math.abs(this.value) / 1);
+                    }
+                },
+                min: -40,
+                max: 40
+            },
+    
+            plotOptions: {
+                series: {
+                    stacking: 'normal'
+                }
+            },
+    
+            tooltip: {
+                formatter: function(){
+                    return '<b>'+ this.series.name +', '+ this.point.category +'</b><br/>'+
+                        Highcharts.numberFormat(Math.abs(this.point.y), 0);
+                }
+            },
+    
+            series: [{
+                name: $scope.clubstats[0].clubname,
+                data: [$scope.clubstats[0].clearances * -1, 
+	                $scope.clubstats[0].corners * -1, 
+	                $scope.clubstats[0].crosssuccess * -1, 
+	                $scope.clubstats[0].crossmissed * -1, 
+	                $scope.clubstats[0].fouls * -1, 
+	                $scope.clubstats[0].goals * -1, 
+	                $scope.clubstats[0].offsides * -1,
+                    $scope.clubstats[0].passsuccess * -1, 
+                    $scope.clubstats[0].passmissed * -1, 
+                    $scope.clubstats[0].possession * -1, 
+                    $scope.clubstats[0].rc * -1, 
+                    $scope.clubstats[0].yc * -1, 
+                    $scope.clubstats[0].shotstarget * -1, 
+                    $scope.clubstats[0].shotswide * -1,
+                    $scope.clubstats[0].tackleswon * -1, 
+                    $scope.clubstats[0].tackleslost * -1]
+            }, {
+                name: $scope.clubstats[1].clubname,
+                data: [$scope.clubstats[1].clearances, 
+	                $scope.clubstats[1].corners, 
+	                $scope.clubstats[1].crosssuccess, 
+	                $scope.clubstats[1].crossmissed, 
+	                $scope.clubstats[1].fouls, 
+	                $scope.clubstats[1].goals, 
+	                $scope.clubstats[1].offsides,
+                    $scope.clubstats[1].passsuccess, 
+                    $scope.clubstats[1].passmissed, 
+                    $scope.clubstats[1].possession, 
+                    $scope.clubstats[1].rc, 
+                    $scope.clubstats[1].yc, 
+                    $scope.clubstats[1].shotstarget, 
+                    $scope.clubstats[1].shotswide,
+                    $scope.clubstats[1].tackleswon, 
+                    $scope.clubstats[1].tackleslost]
+            }]
+        });
 	}
 	
 }]);
