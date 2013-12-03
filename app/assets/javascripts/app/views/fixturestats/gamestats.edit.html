@@ -1,0 +1,49 @@
+<h2>Game stats</h2>
+
+<table class="stats edit">
+	<thead>
+		<tr class="head">
+			<th>Club</th>
+			<th>Clearances</th> 
+			<th>Corners</th>
+			<th>Cross missed</th>
+			<th>Cross success</th> 
+			<th>Fouls</th>
+			<th>Goals</th>
+			<th>Offsides</th>
+			<th>Pass missed</th>
+			<th>Pass success</th>
+			<th>Possession</th> 
+			<th>RC</th>
+			<th>Shots on target</th>
+			<th>Shots wide</th>
+			<th>Tackles lost</th>
+			<th>Tackles won</th> 
+			<th>YC</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="clubstat in clubstats" ng-class-odd="'odd'" ng-class-even="'even'">
+			<td>{{clubstat.clubname}}</td>
+			<td><input type="text" ng-model="clubstat.clearances" /></td> 
+			<td><input type="text" ng-model="clubstat.corners" /></td> 
+			<td><input type="text" ng-model="clubstat.crossmissed" /></td> 
+			<td><input type="text" ng-model="clubstat.crosssuccess" /></td> 
+			<td><input type="text" ng-model="clubstat.fouls" /></td> 
+			<td><input type="text" ng-model="clubstat.goals" /></td> 
+			<td><input type="text" ng-model="clubstat.offsides" /></td> 
+			<td><input type="text" ng-model="clubstat.passmissed" /></td> 
+			<td><input type="text" ng-model="clubstat.passsuccess" /></td> 
+			<td><input type="text" ng-model="clubstat.possession" /></td> 
+			<td><input type="text" ng-model="clubstat.rc" /></td> 
+			<td><input type="text" ng-model="clubstat.shotstarget" /></td> 
+			<td><input type="text" ng-model="clubstat.shotswide" /></td> 
+			<td><input type="text" ng-model="clubstat.tackleslost" /></td> 
+			<td><input type="text" ng-model="clubstat.tackleswon" /></td>  
+			<td><input type="text" ng-model="clubstat.yc" /></td> 
+		</tr>
+	</tbody>
+</table>
+
+<button ng-click="cancel()">Cancel</button>
+<button ng-click="save()">Save</button>

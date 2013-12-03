@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  goals: 1
+  shotstarget: 1
+  shotswide: 1
+  possession: 1
+  tackleswon: 1
+  tackleslost: 1
+  offsides: 1
+  corners: 1
+  passsuccess: 1
+  passmissed: 1
+  crosssuccess: 1
+  crossmissed: 1
+  clearances: 1
+  fouls: 1
+  yc: 1
+  rc: 1
+
+two:
+  goals: 1
+  shotstarget: 1
+  shotswide: 1
+  possession: 1
+  tackleswon: 1
+  tackleslost: 1
+  offsides: 1
+  corners: 1
+  passsuccess: 1
+  passmissed: 1
+  crosssuccess: 1
+  crossmissed: 1
+  clearances: 1
+  fouls: 1
+  yc: 1
+  rc: 1

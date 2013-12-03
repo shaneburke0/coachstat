@@ -1,0 +1,46 @@
+<h3>Game stats</h3>
+
+<table class="stats">
+	<thead>
+		<tr class="head">
+			<th>Club</th>
+			<th>Clearances</th> 
+			<th>Corners</th>
+			<th>Cross missed</th>
+			<th>Cross success</th> 
+			<th>Fouls</th>
+			<th>Goals</th>
+			<th>Offsides</th>
+			<th>Pass missed</th>
+			<th>Pass success</th>
+			<th>Possession</th> 
+			<th>RC</th>
+			<th>Shots on target</th>
+			<th>Shots wide</th>
+			<th>Tackles lost</th>
+			<th>Tackles won</th> 
+			<th>YC</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="clubstat in clubstats" ng-class-odd="'odd'" ng-class-even="'even'">
+			<td>{{clubstat.clubname}}</td>
+			<td>{{clubstat.clearances}}</td> 
+			<td>{{clubstat.corners}}</td>
+			<td>{{clubstat.crossmissed}}</td>
+			<td>{{clubstat.crosssuccess}}</td>
+			<td>{{clubstat.fouls}}</td>
+			<td>{{clubstat.goals}}</td>
+			<td>{{clubstat.offsides}}</td>
+			<td>{{clubstat.passmissed}}</td>
+			<td>{{clubstat.passsuccess}}</td>
+			<td>{{clubstat.possession}}</td> 
+			<td>{{clubstat.rc}}</td>
+			<td>{{clubstat.shotstarget}}</td>
+			<td>{{clubstat.shotswide}}</td>
+			<td>{{clubstat.tackleslost}}</td>
+			<td>{{clubstat.tackleswon}}</td>
+			<td>{{clubstat.yc}}</td>
+		</tr>
+	</tbody>
+</table>

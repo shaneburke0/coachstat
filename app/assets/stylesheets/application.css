@@ -392,7 +392,7 @@ table.stats {
 	text-align: center;
 }
 
-table.stats tr.head {
+table.stats tr.head, table.stats td:hover {
 	background-color: #DE5E60;
 	color: #fff;
 }

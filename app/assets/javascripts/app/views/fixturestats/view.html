@@ -1,40 +1,23 @@
-
-<div ng-repeat="player in lineup.players">
-	<span>{{player.prototype.firstName}} {{player.prototype.lastName}}</span>
-	<span>{{player.stats.mins}}</span>
-	<span>{{player.stats.goals}}</span>
-	<span>{{player.stats.assists}}</span>
-	<span>{{player.stats.shotstarget}}</span>
-	<span>{{player.stats.shotswide}}</span>	
-	<span>{{player.stats.passsuccess}}</span>
-	<span>{{player.stats.passmissed}}</span>
-	<span>{{player.stats.tackleswon}}</span>
-	<span>{{player.stats.tackleslost}}</span>
-	<span>{{player.stats.og}}</span>
-	<span>{{player.stats.yc}}</span>
-	<span>{{player.stats.rc}}</span>
-</div>
-
-
-<div ng-controller="FixtureStatsCtrl" class="club">	
-		<div class="box lrg">
+<div ng-controller="FixtureStatsCtrl" class="">	
+		<div class="">
 			<a href=""><h2>Goals / Shots</h2></a>
-			<div class="boxinner">
-				<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+			<div class="">
+				<div id="goalsGraph" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 			</div>
 			<div class="clear"></div>	
 		</div>
 		
-		<div class="box stats">
+		<div class="">
 			<a href=""><h2>Tackles</h2></a>
-			<div class="boxinner">
+			<div class="">
+				<div id="tacklesGraph" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 			</div>
 		</div>
 		
-		<div class="box">
+		<div class="">
 			<a href=""><h2>Passes</h2></a>
-			<div class="boxinner">
-				
+			<div class="">
+				<div id="passesGraph" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 			</div>
 		</div>
 </div>

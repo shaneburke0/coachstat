@@ -1,5 +1,8 @@
 Coachstat::Application.routes.draw do
   
+  resources :gamestats
+
+
   resources :fixturestats
 
 
@@ -27,6 +30,9 @@ Coachstat::Application.routes.draw do
   delete '/fixturestats/fixture/:fixtureid/player/:playerid', to: 'fixturestats#deletePlayer'
   get '/fixturestats/fixture/:fixtureid/player/:playerid', to: 'fixturestats#getPlayer'
   put '/fixturestats/updateallplayers/:fixtureid', to: 'fixturestats#updateAllPlayers'
+  get '/gamestats/fixture/:fixtureid/club/:clubid/oppositionclub/:oppid', to: 'gamestats#getGameStats'
+  post '/gamestats/clubs', to: 'gamestats#createMultiple'
+  put '/gamestats/updategame/:fixtureid', to: 'gamestats#updategame'
 
 
   # The priority is based upon order of creation:

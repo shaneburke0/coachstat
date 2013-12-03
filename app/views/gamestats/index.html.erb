@@ -1,0 +1,57 @@
+<h1>Listing gamestats</h1>
+
+<table>
+  <tr>
+    <th>Goals</th>
+    <th>Shotstarget</th>
+    <th>Shotswide</th>
+    <th>Possession</th>
+    <th>Tackleswon</th>
+    <th>Tackleslost</th>
+    <th>Offsides</th>
+    <th>Corners</th>
+    <th>Passsuccess</th>
+    <th>Passmissed</th>
+    <th>Crosssuccess</th>
+    <th>Crossmissed</th>
+    <th>Clearances</th>
+    <th>Fouls</th>
+    <th>Yc</th>
+    <th>Rc</th>
+    <th>Fixture Id</th>
+    <th>Club Id</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @gamestats.each do |gamestat| %>
+  <tr>
+    <td><%= gamestat.goals %></td>
+    <td><%= gamestat.shotstarget %></td>
+    <td><%= gamestat.shotswide %></td>
+    <td><%= gamestat.possession %></td>
+    <td><%= gamestat.tackleswon %></td>
+    <td><%= gamestat.tackleslost %></td>
+    <td><%= gamestat.offsides %></td>
+    <td><%= gamestat.corners %></td>
+    <td><%= gamestat.passsuccess %></td>
+    <td><%= gamestat.passmissed %></td>
+    <td><%= gamestat.crosssuccess %></td>
+    <td><%= gamestat.crossmissed %></td>
+    <td><%= gamestat.clearances %></td>
+    <td><%= gamestat.fouls %></td>
+    <td><%= gamestat.yc %></td>
+    <td><%= gamestat.rc %></td>
+    <td><%= gamestat.fixtureid %></td>
+    <td><%= gamestat.clubid %></td>
+    <td><%= link_to 'Show', gamestat %></td>
+    <td><%= link_to 'Edit', edit_gamestat_path(gamestat) %></td>
+    <td><%= link_to 'Destroy', gamestat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Gamestat', new_gamestat_path %>
