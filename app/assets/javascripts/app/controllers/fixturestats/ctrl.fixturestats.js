@@ -8,6 +8,14 @@ coachStatControllers.controller('FixtureStatsCtrl', ['$scope', '$http', '$log', 
 	
 	var _lineupId = 0;
 	
+	$rootScope.path = [{ label: 'Home', url: '#/'},
+            		   { label: 'Clubs', url: '#/clubs'},
+            		   { label: 'Name here', url: '#/clubs/' + $routeParams.clubId},
+            		   { label: 'Fixtures', url: '#/clubs/' + $routeParams.clubId + '/fixtures',},
+            		   { label: 'Opp here', url: '#/clubs/' + $routeParams.clubId + '/fixtures/' + $routeParams.fixtureId, isActive: 'active' },
+            		   { label: 'Stats', url: '#/clubs/' + $routeParams.clubId + '/fixtures/' + $routeParams.fixtureId + '/stats', isActive: 'active' }];
+	
+	
 	$http({ method: 'GET', url: '/lineups/fixture/' + $routeParams.fixtureId, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
 	.success(function(data, status, headers, config) {
 		var lineup = new ModelLineup({id: data.id, clubid: data.clubid, fixtureid: data.fixtureid });
@@ -52,7 +60,6 @@ coachStatControllers.controller('FixtureStatsCtrl', ['$scope', '$http', '$log', 
 	function loadFixtureStats(id) {
 		$http({ method: 'GET', url: '/fixturestats/fixture/' + $routeParams.fixtureId +'/player/' + id, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
 		.success(function(data, status, headers, config) {
-			$log.warn(data, status, headers, config);
 			
 			var stats = new ModelFixtureStats({
 				id: data.id,
@@ -87,18 +94,18 @@ coachStatControllers.controller('FixtureStatsCtrl', ['$scope', '$http', '$log', 
 						chartTacklesStats.players.push($scope.lineup.players[i].prototype.lastName);
 						chartTacklesStats.tackleswon.push(stats.tackleswon);
 						chartTacklesStats.tackleslost.push(stats.tackleslost);
-						chartTacklesStats.percentage.push(((stats.tackleslost + stats.tackleswon) / stats.tackleswon) * 100);
+						chartTacklesStats.percentage.push((stats.tackleswon / (stats.tackleslost + stats.tackleswon)) * 100);
 					}
 					
 					if(stats.passsuccess > 0 || stats.passmissed > 0) {
 						chartPassesStats.players.push($scope.lineup.players[i].prototype.lastName);
 						chartPassesStats.passsuccess.push(stats.passsuccess);
 						chartPassesStats.passmissed.push(stats.passmissed);
-						chartPassesStats.percentage.push(((stats.passmissed + stats.passsuccess) / stats.passsuccess) * 100);
+						chartPassesStats.percentage.push((stats.passsuccess / (stats.passmissed + stats.passsuccess)) * 100);
 					}
 				}
 			}
-			window.setTimeout(createCharts, 4000);
+			window.setTimeout(createCharts, 500);
 		})
 		.error(function(data, status, headers, config) { 
 			$log.warn(data, status, headers, config);
@@ -109,7 +116,8 @@ coachStatControllers.controller('FixtureStatsCtrl', ['$scope', '$http', '$log', 
 	}
 	
 	function createCharts() {
-		createThreeBarhart(
+		window.setTimeout(function() {
+			createThreeBarhart('#goalsGraph',
 			{
 				text: 'Goals / Shots',
 				players: chartShotsStats.players,
@@ -117,21 +125,35 @@ coachStatControllers.controller('FixtureStatsCtrl', ['$scope', '$http', '$log', 
 						['Shots on target', chartShotsStats.shotstarget],
 						['Shots off target', chartShotsStats.shotswide]]
 			});
-
+		}, 1000);
+		
+		
+		window.setTimeout(function() {
+			createThreeBarhart('#tacklesGraph',
+			{
+				text: 'Tackles',
+				players: chartTacklesStats.players,
+				series: [['Tackles won', chartTacklesStats.tackleswon],
+						['Tackles lost', chartTacklesStats.tackleslost],
+						['Win %', chartTacklesStats.percentage]]
+			});
+		}, 2000);
+		
+		
+		window.setTimeout(function() {
+			createThreeBarhart('#passesGraph',
+			{
+				text: 'Passes',
+				players: chartPassesStats.players,
+				series: [['Pass success', chartPassesStats.passsuccess],
+						['Pass missed', chartPassesStats.passmissed],
+						['Success %', chartPassesStats.percentage]]
+			});
+		}, 3000);	
 	}
 	
-	function createThreeBarhart(params) {
-		Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function(color) {
-		    return {
-		        radialGradient: { cx: 0.5, cy: 0.3, r: 0.7 },
-		        stops: [
-		            [0, color],
-		            [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
-		        ]
-		    };
-		});
-		
-		$('#container').highcharts({
+	function createThreeBarhart(elem, params) {		
+		$(elem).highcharts({
             chart: {
                 type: 'bar'
             },
