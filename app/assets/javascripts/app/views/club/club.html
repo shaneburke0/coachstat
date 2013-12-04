@@ -35,6 +35,7 @@
 			<a href="{{fixturesHref}}"><h2>Fixtures</h2></a>
 			<div class="boxinner">
 				<div ng-repeat="fixture in club.fixtures" >
+					<a class="inline right" href="{{baseHref}}/fixtures/add">Add</a>
 					<div class="fix">
 						<a href="{{fixturesHref}}/{{fixture.id}}" title="{{fixture.opp.name}}">
 							<img ng-src="{{fixture.opp.image}}" class="thumb sml" />

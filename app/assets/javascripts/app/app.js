@@ -12,6 +12,10 @@ coachStat.config(['$routeProvider',
         templateUrl: '/assets/app/views/club/clubs.html',
         controller: 'ClubsCtrl'
       }).
+      when('/clubs/addopposition', {
+        templateUrl: '/assets/app/views/club/addopposition.html',
+        controller: 'ClubNewOppositionCtrl'
+      }).
       when('/clubs/add', {
         templateUrl: '/assets/app/views/club/add.html',
         controller: 'ClubNewCtrl'
@@ -43,6 +47,10 @@ coachStat.config(['$routeProvider',
       when('/clubs/:clubId/players/:playerId/edit', {
         templateUrl: '/assets/app/views/players/edit.html',
         controller: 'PlayerEditCtrl'
+      }).
+      when('/clubs/:clubId/fixtures/add', {
+        templateUrl: '/assets/app/views/fixtures/add.html',
+        controller: 'FixtureAddCtrl'
       }).
       when('/clubs/:clubId/fixtures', {
         templateUrl: '/assets/app/views/fixtures/fixtures.html',

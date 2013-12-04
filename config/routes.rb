@@ -28,6 +28,7 @@ Coachstat::Application.routes.draw do
   get '/lineupplayers/:id/player/:playerid', to: 'lineupplayers#getPlayer'
   put '/lineupplayers/:id/updateFormation', to: 'lineupplayers#updateFormation'
   delete '/fixturestats/fixture/:fixtureid/player/:playerid', to: 'fixturestats#deletePlayer'
+  get '/fixturestats/player/:playerid', to: 'fixturestats#getAllPlayerStats'
   get '/fixturestats/fixture/:fixtureid/player/:playerid', to: 'fixturestats#getPlayer'
   put '/fixturestats/updateallplayers/:fixtureid', to: 'fixturestats#updateAllPlayers'
   get '/gamestats/fixture/:fixtureid/club/:clubid/oppositionclub/:oppid', to: 'gamestats#getGameStats'

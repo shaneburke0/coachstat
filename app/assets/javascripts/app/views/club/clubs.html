@@ -1,11 +1,28 @@
 <div ng-controller="ClubsCtrl">	
 	<div>
-		<h2>Clubs</h2>
+		<h2>My Clubs</h2>
 		<div>
 			<a href="/#/clubs/add">Create new club</a>	
 		</div>
 		<br />
 		<div ng-repeat="club in clubs" class="clubs">
+			<a href="/#/clubs/{{club.id}}" title="{{club.name}}">
+				<img ng-src="{{club.image}}" class="thumb med" title="{{club.name}}" />
+			</a>
+			<div class="info">
+				<h3><a href="/#/clubs/{{club.id}}" title="{{club.name}}">{{club.name}}</a></h3>
+			</div>
+			<div class="clear"></div>
+		</div>	
+	</div>
+	
+	<div>
+		<h2>Opposition Clubs</h2>
+		<div>
+			<a href="/#/clubs/addopposition">Create new opposition club</a>	
+		</div>
+		<br />
+		<div ng-repeat="club in oppclubs" class="clubs opp">
 			<a href="/#/clubs/{{club.id}}" title="{{club.name}}">
 				<img ng-src="{{club.image}}" class="thumb med" title="{{club.name}}" />
 			</a>
