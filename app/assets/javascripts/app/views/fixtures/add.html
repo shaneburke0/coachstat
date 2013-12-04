@@ -1,0 +1,29 @@
+<div ng-controller="FixtureAddCtrl" >
+	<h3>Add fixture details</h3>
+	<div class="info">
+		<div>
+			<label>Opposition: </label>
+			<select ng-model="fixture.oppid" ng-options="c.id as c.name for c in clubs">
+			</select>
+			<a href="#/clubs/addopposition">Create Opposition Club</a>
+		</div>
+		<div>
+			<label>Date: </label>
+			<input ng-model="fixture.date" />	
+		</div>
+		<div>
+			<label>Time: </label>
+			<input ng-model="fixture.time" />	
+		</div>
+		<div>
+			<label>Location: </label>
+			<input ng-model="fixture.location" />			
+		</div>
+		<div>
+			<button ng-click="cancel()">Cancel</button>
+			<button ng-click="save(fixture)">Save</button>
+		</div>
+
+
+	</div>
+</div>

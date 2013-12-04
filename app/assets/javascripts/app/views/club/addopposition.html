@@ -1,0 +1,30 @@
+<div ng-controller="ClubNewOppositionCtrl" class="">	
+	<div class="">
+		<h1>Create new opposition club</h1>
+		<div>
+			<label>Name: </label> 
+			<input ng-model="club.name" />
+		</div>
+		<div>
+			<label>Location: </label> 
+			<input ng-model="club.location" />
+		</div>
+		<div>
+			<label>Type: </label> 
+			<select ng-model="club.club_type">
+				<option value="1">Soccer</option>
+				<option value="2">Gaelic Football</option>
+			</select>
+		</div>
+		<div>
+			<label>Image URL: </label>
+			<input ng-model="club.image" />
+			
+			<input type="hidden" ng-model="club.profileid" />
+		</div>
+		<div>
+			<button ng-click="cancel()">Cancel</button>
+			<button ng-click="create(club)">Create</button>	
+		</div>
+	</div>
+</div>

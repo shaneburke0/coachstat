@@ -1,10 +1,25 @@
-<div ng-controller="PlayerCtrl">
-	<div><img ng-src="{{player.image}}"/></div>
-	<div>{{player.firstName}}</div>
-	<div>{{player.lastName}}</div>
-	<div>{{player.position}}</div>
-	<div>{{player.height}}</div>
-	<div>{{player.weight}}</div>
-	<div>{{player.dob}}</div>
-	<div><a href="/#{{baseHref}}/edit">Edit</a></div>
+<div ng-controller="PlayerCtrl" class="club">
+	<div class="box details">
+		<a href="{{detailsHref}}"><h2>Details</h2></a>
+		<a class="inline right" href="/#{{baseHref}}/edit">Edit</a>
+		<div class="boxinner">
+			<div><img ng-src="{{player.image}}"/></div>
+			<div>{{player.firstName}}</div>
+			<div>{{player.lastName}}</div>
+			<div>{{player.position}}</div>
+			<div>{{player.height}}</div>
+			<div>{{player.weight}}</div>
+			<div>{{player.dob}}</div>
+		</div>
+	</div>
+		
+	<div class="box exlrg">
+		<h2>Stats</h2>
+		<div class="">
+			<h2></h2>
+			<div class="">
+				<div id="areaspline" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+			</div>
+		</div>
+	</div>
 </div>

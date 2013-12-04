@@ -88,6 +88,15 @@ class FixturestatsController < ApplicationController
     end
   end
   
+  def getAllPlayerStats
+        @fixturestats = Fixturestat.where('playerid' => params[:playerid])
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @fixturestats }
+    end
+  end
+  
   def updateAllPlayers
     @players = JSON.parse(params[:players])
     

@@ -6,4 +6,5 @@ function ModelClub(club) {
 	this.image = club.image;
 	this.players = [];
 	this.fixtures = [];
+	this.isOpposition = club.isOpposition;
 }
