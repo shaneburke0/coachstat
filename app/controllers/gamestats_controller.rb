@@ -121,6 +121,14 @@ class GamestatsController < ApplicationController
     end
     
   end
+  def getClubStats
+    @gamestats = Gamestat.where('clubid' => params[:clubid])
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @gamestats }
+    end
+  end
   
   def createMultiple 
     @gamestats = JSON.parse(params[:clubs])

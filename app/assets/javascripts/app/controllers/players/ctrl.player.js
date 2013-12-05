@@ -2,7 +2,7 @@ coachStatControllers.controller('PlayerCtrl', ['$scope', '$http', '$log', '$rout
 	function($scope, $http, $log, $routeParams, $rootScope, HighChartsFactory) {
 	$scope.player = new ModelPlayer({});
 	$scope.stats = [];
-	$scope.genStats = { games: 0, assists: 0, goals: 0, mins: 0, og: 0, passmissed: 0, passsuccess: 0, rc: 0, shotstarget: 0, shotswide: 0, tackleslost: 0, tackleswon: 0, yc: 0 };
+	$scope.genStats = { games: 0, assists: 0, goals: 0, mins: 0, og: 0, passmissed: 0, passsuccess: 0, rc: 0, shotstarget: 0, shotswide: 0, tackleslost: 0, tackleswon: 0, yc: 0, shotsperc: 0, passperc: 0, tacklesperc: 0 };
 	var chartShotsAssitsStats = { games: [], goals: [], assists: [], shotstarget: [] };
 	
 	$scope.baseHref = '/clubs/' + $routeParams.clubId +'/players/' + $routeParams.playerId;
@@ -97,6 +97,9 @@ coachStatControllers.controller('PlayerCtrl', ['$scope', '$http', '$log', '$rout
 				$scope.genStats.tackleswon += data[i].tackleswon;
 				$scope.genStats.yc += data[i].yc;
 				
+				$scope.genStats.shotsperc = (($scope.genStats.shotstarget / ($scope.genStats.shotstarget + $scope.genStats.shotswide)) * 100).toFixed(2);
+				$scope.genStats.passperc = (($scope.genStats.passsuccess / ($scope.genStats.passmissed + $scope.genStats.passsuccess)) * 100).toFixed(2);
+				$scope.genStats.tacklesperc = (($scope.genStats.tackleswon / ($scope.genStats.tackleslost + $scope.genStats.tackleswon)) * 100).toFixed(2);
 				
 				$scope.stats.push(stats);
 				loadFixture(stats.fixtureid);
