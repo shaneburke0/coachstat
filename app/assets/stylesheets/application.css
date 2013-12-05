@@ -404,3 +404,7 @@ table.stats tr.even {
 table.stats input {
 	width: 30px;
 }
+
+table.stats td.td-padding {
+	padding: 5px 20px;
+}

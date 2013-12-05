@@ -2,6 +2,7 @@ coachStatControllers.controller('PlayerCtrl', ['$scope', '$http', '$log', '$rout
 	function($scope, $http, $log, $routeParams, $rootScope, HighChartsFactory) {
 	$scope.player = new ModelPlayer({});
 	$scope.stats = [];
+	$scope.genStats = { games: 0, assists: 0, goals: 0, mins: 0, og: 0, passmissed: 0, passsuccess: 0, rc: 0, shotstarget: 0, shotswide: 0, tackleslost: 0, tackleswon: 0, yc: 0 };
 	var chartShotsAssitsStats = { games: [], goals: [], assists: [], shotstarget: [] };
 	
 	$scope.baseHref = '/clubs/' + $routeParams.clubId +'/players/' + $routeParams.playerId;
@@ -81,6 +82,22 @@ coachStatControllers.controller('PlayerCtrl', ['$scope', '$http', '$log', '$rout
 					tackleswon: data[i].tackleswon,
 					yc: data[i].yc
 				});
+				
+				$scope.genStats.games += 1;
+				$scope.genStats.assists += data[i].assists;
+				$scope.genStats.goals += data[i].goals;
+				$scope.genStats.mins += data[i].mins;
+				$scope.genStats.og += data[i].og;
+				$scope.genStats.passmissed += data[i].passmissed;
+				$scope.genStats.passsuccess += data[i].passsuccess;
+				$scope.genStats.rc += data[i].rc;
+				$scope.genStats.shotstarget += data[i].shotstarget;
+				$scope.genStats.shotswide += data[i].shotswide;
+				$scope.genStats.tackleslost += data[i].tackleslost;
+				$scope.genStats.tackleswon += data[i].tackleswon;
+				$scope.genStats.yc += data[i].yc;
+				
+				
 				$scope.stats.push(stats);
 				loadFixture(stats.fixtureid);
 			}
@@ -108,7 +125,7 @@ coachStatControllers.controller('PlayerCtrl', ['$scope', '$http', '$log', '$rout
 		window.setTimeout(function() {
 			createThreeBarhart('#areaspline',
 			{
-				text: 'Goals / Assists / Shot on target - last 10 games',
+				text: 'Goals / Assists / Shot on target - per game',
 				games: chartShotsAssitsStats.games,
 				goals: chartShotsAssitsStats.goals,
 				assists: chartShotsAssitsStats.assists,
