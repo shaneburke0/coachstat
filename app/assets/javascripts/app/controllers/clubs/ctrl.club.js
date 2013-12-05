@@ -2,6 +2,8 @@ coachStatControllers.controller('ClubCtrl', ['$scope', '$http', '$log', '$routeP
 	function($scope, $http, $log, $routeParams, $rootScope) {
 	
 	$scope.club = new ModelClub({});
+	$scope.clubstats = { games: 0, clearances: 0, corners: 0, crossmissed: 0, crosssuccess: 0, fouls: 0, goals: 0, offsides: 0, passmissed: 0, passsuccess: 0, possession: 0, rc: 0, shotstarget: 0, shotswide: 0, tackleslost: 0, tackleswon: 0, yc: 0 };
+
 	var baseHref = '/#/clubs/' + $routeParams.clubId;
 	$scope.baseHref = baseHref;
 	$scope.detailsHref = baseHref + '/details';
@@ -15,6 +17,7 @@ coachStatControllers.controller('ClubCtrl', ['$scope', '$http', '$log', '$routeP
 			loadPlayers(club.id);
 			loadFixtures();
 			createBreadcrumb();
+			loadGameStats();
 		})
 		.error(function(data, status, headers, config) { 
 			$log.warn(data, status, headers, config);
@@ -74,4 +77,41 @@ coachStatControllers.controller('ClubCtrl', ['$scope', '$http', '$log', '$routeP
 			$log.warn(data, status, headers, config);
 		});
 	}
+	
+	function loadGameStats() {
+		$http({ method: 'GET', url: '/gamestats/club/' + $routeParams.clubId, 
+		headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
+		.success(function(data, status, headers, config) {
+			if(data.length < 1) {
+				createGameStats();
+			} else {
+				
+				for(var i = 0; i < data.length; i++) {	
+					$scope.clubstats.games += 1; 
+					$scope.clubstats.clearances += data[i].clearances; 
+					$scope.clubstats.corners += data[i].corners;
+					$scope.clubstats.crossmissed += data[i].crossmissed;
+					$scope.clubstats.crosssuccess += data[i].crosssuccess; 
+					$scope.clubstats.fouls += data[i].fouls; 
+					$scope.clubstats.goals += data[i].goals;
+					$scope.clubstats.offsides += data[i].offsides;
+					$scope.clubstats.passmissed += data[i].passmissed;
+					$scope.clubstats.passsuccess += data[i].passsuccess; 
+					$scope.clubstats.possession += data[i].possession;
+					$scope.clubstats.rc += data[i].rc;
+					$scope.clubstats.shotstarget += data[i].shotstarget; 
+					$scope.clubstats.shotswide += data[i].shotswide; 
+					$scope.clubstats.tackleslost += data[i].tackleslost;
+					$scope.clubstats.tackleswon += data[i].tackleswon; 
+					$scope.clubstats.yc += data[i].yc;
+				}
+				
+				$scope.clubstats.possession = ($scope.clubstats.possession / $scope.clubstats.games).toFixed(2);
+			}
+		})
+		.error(function(data, status, headers, config) { 
+			$log.warn(data, status, headers, config);
+		});
+	}
+	
 }]);

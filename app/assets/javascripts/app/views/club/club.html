@@ -26,12 +26,85 @@
 		</div>
 		
 		<div class="box stats">
-			<a href="{{statsHref}}"><h2>Stats</h2></a>
+			<h2>Stats</h2>
 			<div class="boxinner">
+				<table class="stats">
+					<tbody>
+						<tr class="odd">
+							<td>Games: </td>
+							<td class="td-padding">{{clubstats.games}}</td>
+						</tr>
+						<tr class="even">
+							<td>Clearances: </td>
+							<td class="td-padding">{{clubstats.clearances}}</td>
+						</tr>
+						<tr class="odd">
+							<td>Corners: </td>
+							<td class="td-padding">{{clubstats.corners}}</td>
+						</tr>
+						<tr class="even">
+							<td>Cross success: </td>
+							<td class="td-padding">{{clubstats.crosssuccess}}</td>
+						</tr>
+						<tr class="odd">
+							<td>Cross missed: </td>
+							<td class="td-padding">{{clubstats.crossmissed}}</td>
+						</tr>
+						<tr class="even">
+							<td>Fouls: </td>
+							<td class="td-padding">{{clubstats.fouls}}</td>
+						</tr>
+						<tr class="odd">
+							<td>Goals: </td>
+							<td class="td-padding">{{clubstats.goals}}</td>
+						</tr>
+						<tr class="even">
+							<td>Offsides: </td>
+							<td class="td-padding">{{clubstats.offsides}}</td>
+						</tr>
+						<tr class="odd">
+							<td>Pass missed: </td>
+							<td class="td-padding">{{clubstats.passmissed}}</td>
+						</tr>
+						<tr class="even">
+							<td>Pass success: </td>
+							<td class="td-padding">{{clubstats.passsuccess}}</td>
+						</tr>
+						<tr class="odd">
+							<td>Possession avg %: </td>
+							<td class="td-padding">{{clubstats.possession}}</td>
+						</tr>
+						<tr class="even">
+							<td>Tackles won: </td>
+							<td class="td-padding">{{clubstats.tackleswon}}</td>
+						</tr>
+						<tr class="odd">
+							<td>Tackles lost: </td>
+							<td class="td-padding">{{clubstats.tackleslost}}</td>
+						</tr>
+						<tr class="even">
+							<td>Shots on target: </td>
+							<td class="td-padding">{{clubstats.shotstarget}}</td>
+						</tr>
+						<tr class="odd">
+							<td>Shots off target: </td>
+							<td class="td-padding">{{clubstats.shotswide}}</td>
+						</tr>
+						<tr class="even">
+							<td>Yellow cards: </td>
+							<td class="td-padding">{{clubstats.yc}}</td>
+						</tr>
+						<tr class="odd">
+							<td>Red cards: </td>
+							<td class="td-padding">{{clubstats.rc}}</td>
+						</tr>
+						
+					</tbody>
+				</table>
 			</div>
 		</div>
 		
-		<div class="box fixtures">
+		<div class="box lrg fixtures">
 			<a href="{{fixturesHref}}"><h2>Fixtures</h2></a>
 			<div class="boxinner">
 				<div ng-repeat="fixture in club.fixtures" >
@@ -46,8 +119,10 @@
 								<label>Location: </label>{{fixture.location}}
 							</span>	
 						</a>
-						
+						<div class="clear"></div>
 					</div>
+					<br />
+					<div class="clear"></div>
 				</div>
 			</div>
 		</div>

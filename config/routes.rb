@@ -32,6 +32,7 @@ Coachstat::Application.routes.draw do
   get '/fixturestats/fixture/:fixtureid/player/:playerid', to: 'fixturestats#getPlayer'
   put '/fixturestats/updateallplayers/:fixtureid', to: 'fixturestats#updateAllPlayers'
   get '/gamestats/fixture/:fixtureid/club/:clubid/oppositionclub/:oppid', to: 'gamestats#getGameStats'
+  get '/gamestats/club/:clubid', to: 'gamestats#getClubStats'
   post '/gamestats/clubs', to: 'gamestats#createMultiple'
   put '/gamestats/updategame/:fixtureid', to: 'gamestats#updategame'
 
