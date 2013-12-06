@@ -1,5 +1,10 @@
 Coachstat::Application.routes.draw do
   
+  resources :contactus
+
+
+  get "legal/index"
+
   resources :gamestats
 
 
@@ -35,6 +40,7 @@ Coachstat::Application.routes.draw do
   get '/gamestats/club/:clubid', to: 'gamestats#getClubStats'
   post '/gamestats/clubs', to: 'gamestats#createMultiple'
   put '/gamestats/updategame/:fixtureid', to: 'gamestats#updategame'
+  get '/legal', to: 'legal#index'
 
 
   # The priority is based upon order of creation:

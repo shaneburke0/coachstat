@@ -88,6 +88,10 @@ coachStat.config(['$routeProvider',
         templateUrl: '/assets/app/views/account/myaccount.html',
         controller: 'MyAccountCtrl'
       }).
+      when('/contactus', {
+        templateUrl: '/assets/app/views/contactus/view.html',
+        controller: 'ContactUsCtrl'
+      }).
       otherwise({
             redirectTo: '/'
         });

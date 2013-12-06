@@ -7,39 +7,41 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="navbar">
-	<a href="/">
-		<h1>CoachStat</h1>
-	</a>
-	<span>every stat counts...</span>
-	<nav id="menu">
-		<ul id="menu-nav"> 
-			<% if user_signed_in? %> 
-				<li><a href="#clubs" alt="Clubs">Clubs</a></li>
-				<li><a href="/#/myaccount" alt="My Account">My Account</a></li>
-				<li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li> 
-			<% else %> 
-	 			<li><%= link_to 'Login', new_user_session_path %></li> 
-			<% end %>
-		</ul> 
-	</nav>
+<div class="wrapper"> 
+	<div id="navbar">
+		<a href="/">
+			<h1>CoachStat</h1>
+		</a>
+		<span>every stat counts...</span>
+		<nav id="menu">
+			<ul id="menu-nav"> 
+				<% if user_signed_in? %> 
+					<li><a href="/#/clubs" alt="Clubs">Clubs</a></li>
+					<li><a href="/#/myaccount" alt="My Account">My Account</a></li>
+					<li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li> 
+				<% else %> 
+		 			<li><%= link_to 'Login', new_user_session_path %></li> 
+				<% end %>
+			</ul> 
+		</nav>
+		
+	</div>
+
+	<%= yield %>
 	
+	<div id="subbar">
+		<p class="notice"><%= notice %></p> 
+		<p class="alert"><%= alert %></p>	
+	</div>
 </div>
 
 
-<%= yield %>
-
-<div id="subbar">
-	<p class="notice"><%= notice %></p> 
-	<p class="alert"><%= alert %></p>	
+<div class="footer">
+	<span class="links">
+		<a href="/#/contactus">Contact Us</a> | 
+		<a href="/legal">Legal</a>
+	</span>
 </div>
-
-
-<% if user_signed_in? %> 
- <div>Signed in as... <%= current_user.email %> (<%= link_to 'Sign out', destroy_user_session_path, :method => :delete 
- %>)</div> 
-<% else %> 
- <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %> 
-<% end %>
+	
 </body>
 </html>
