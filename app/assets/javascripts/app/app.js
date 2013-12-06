@@ -88,6 +88,10 @@ coachStat.config(['$routeProvider',
         templateUrl: '/assets/app/views/account/myaccount.html',
         controller: 'MyAccountCtrl'
       }).
+      when('/contactus/confirm', {
+        templateUrl: '/assets/app/views/contactus/confirm.html',
+        controller: 'ContactUsConfirmCtrl'
+      }).
       when('/contactus', {
         templateUrl: '/assets/app/views/contactus/view.html',
         controller: 'ContactUsCtrl'
