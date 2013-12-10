@@ -15,12 +15,22 @@
 		<span>every stat counts...</span>
 		<nav id="menu">
 			<ul id="menu-nav"> 
+				
 				<% if user_signed_in? %> 
-					<li><a href="/#/clubs" alt="Clubs">Clubs</a></li>
-					<li><a href="/#/myaccount" alt="My Account">My Account</a></li>
-					<li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li> 
+				
+					<% if current_user.try(:admin?) %>
+						<li><a href="/profiles" alt="profiles">Profiles</a></li>
+						<li><a href="/clubs" alt="Clubs">Clubs</a></li>
+						<li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li> 
+					
+					<% else %> 
+						<li><a href="/#/clubs" alt="Clubs">Clubs</a></li>
+						<li><a href="/#/myaccount" alt="My Account">My Account</a></li>
+						<li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li> 
+					<% end %>
 				<% else %> 
 		 			<li><%= link_to 'Login', new_user_session_path %></li> 
+		 			<li><%= link_to 'Register', new_user_registration_path %></li>
 				<% end %>
 			</ul> 
 		</nav>

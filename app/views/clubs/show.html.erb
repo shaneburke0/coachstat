@@ -1,5 +1,6 @@
+<div class="admin-wrapper">
 <p id="notice"><%= notice %></p>
-
+<h1><%= @club.name %></h1>
 <p>
   <b>Name:</b>
   <%= @club.name %>
@@ -17,9 +18,15 @@
 
 <p>
   <b>Profileid:</b>
-  <%= @club.profileid %>
+  <%= link_to @club.profileid, :controller => 'profiles', :action => 'show', :id=>@club.profileid %>
 </p>
-
+<p>
+    <%= link_to 'View players', :controller => 'players', :action => 'clubplayers', :id=>@club.id %>
+</p>
+<p>
+    <%= link_to 'View fixtures', :controller => 'fixtures', :action => 'clubfixtures', :id=>@club.id %>
+</p>
 
 <%= link_to 'Edit', edit_club_path(@club) %> |
 <%= link_to 'Back', clubs_path %>
+</div>

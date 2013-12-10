@@ -1,0 +1,89 @@
+<div class="admin-wrapper">
+<p id="notice"><%= notice %></p>
+<% @gamestats.each do |gamestat| %>
+<h1>Club id: <%= gamestat.clubid %></h1>
+<p>
+  <b>Goals:</b>
+  <%= gamestat.goals %>
+</p>
+
+<p>
+  <b>Shotstarget:</b>
+  <%= gamestat.shotstarget %>
+</p>
+
+<p>
+  <b>Shotswide:</b>
+  <%= gamestat.shotswide %>
+</p>
+
+<p>
+  <b>Possession:</b>
+  <%= gamestat.possession %>
+</p>
+
+<p>
+  <b>Tackleswon:</b>
+  <%= gamestat.tackleswon %>
+</p>
+
+<p>
+  <b>Tackleslost:</b>
+  <%= gamestat.tackleslost %>
+</p>
+<p>
+  <b>Offsides:</b>
+  <%= gamestat.offsides %>
+</p>
+
+<p>
+  <b>Corners:</b>
+  <%= gamestat.corners %>
+</p>
+
+<p>
+  <b>Passsuccess:</b>
+  <%= gamestat.passsuccess %>
+</p>
+
+<p>
+  <b>Passmissed:</b>
+  <%= gamestat.passmissed %>
+</p>
+
+<p>
+  <b>Crosssuccess:</b>
+  <%= gamestat.crosssuccess %>
+</p>
+
+<p>
+  <b>Crossmissed:</b>
+  <%= gamestat.crossmissed %>
+</p>
+
+<p>
+  <b>Clearances:</b>
+  <%= gamestat.clearances %>
+</p>
+
+<p>
+  <b>Fouls:</b>
+  <%= gamestat.fouls %>
+</p>
+
+<p>
+  <b>Yc:</b>
+  <%= gamestat.yc %>
+</p>
+
+<p>
+  <b>Rc:</b>
+  <%= gamestat.rc %>
+</p>
+
+
+<%= link_to 'Edit', edit_gamestat_path(gamestat) %> |
+<%= link_to 'Back', gamestats_path %>
+
+<% end %>
+</div>

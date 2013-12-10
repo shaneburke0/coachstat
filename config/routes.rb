@@ -1,16 +1,14 @@
 Coachstat::Application.routes.draw do
   
+  get "admin/index"
+
   resources :contactus
 
 
   get "legal/index"
 
   resources :gamestats
-
-
   resources :fixturestats
-
-
   resources :lineupplayers
   resources :lineups
   resources :fixtures
@@ -25,7 +23,7 @@ Coachstat::Application.routes.draw do
   match '/logout' => 'user#logout' 
   match '/myprofile' => 'profiles#myprofile'
   get '/clubs/:id/players', to: 'players#clubplayers'
-  get '/clubs/:id/players/:playerid', to: 'players#show'
+  get '/clubs/:clubid/players/:id', to: 'players#show'
   get '/clubs/:id/fixtures', to: 'fixtures#clubfixtures'
   get '/clubs/:id/fixture/:fixtureid', to: 'fixtures#clubfixture'
   get '/lineups/fixture/:fixtureid', to: 'lineups#getFixtureLineup'
@@ -41,6 +39,7 @@ Coachstat::Application.routes.draw do
   post '/gamestats/clubs', to: 'gamestats#createMultiple'
   put '/gamestats/updategame/:fixtureid', to: 'gamestats#updategame'
   get '/legal', to: 'legal#index'
+  get '/admin', to: 'admin#index'
 
 
   # The priority is based upon order of creation:

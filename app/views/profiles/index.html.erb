@@ -1,4 +1,5 @@
-<h1>Listing profiles</h1>
+<div class="admin-wrapper">
+<h1>Listing Profiles</h1>
 
 <table>
   <tr>
@@ -19,9 +20,9 @@
     <td><%= profile.address %></td>
     <td><%= profile.mobile %></td>
     <td><%= profile.user.email %></td>
-    <td><%= link_to 'Show', profile %></td>
-    <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-    <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to '', profile, :class=>"icon-show", :title=>"Show" %></td>
+    <td><%= link_to '', edit_profile_path(profile), :class=>"icon-edit", :title=>"Edit" %></td>
+    <td><%= link_to '', profile, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"icon-delete", :title=>"Delete" %></td>    
   </tr>
 <% end %>
 </table>
@@ -29,3 +30,4 @@
 <br />
 
 <%= link_to 'New Profile', new_profile_path %>
+</div>

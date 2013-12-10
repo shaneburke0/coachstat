@@ -468,7 +468,8 @@ table.stats td.td-padding {
 
 .box .icon-team, 
 .box .icon-players, 
-.box .icon-stats {
+.box .icon-stats,
+.box .icon-profiles {
 	font-size: 40px;
 	color: #DE5E60;
 }
@@ -479,6 +480,10 @@ table.stats td.td-padding {
 
 .icon-players:before {
 	content: "\e61f";
+}
+
+.icon-profiles:before {
+	content: "\e609";
 }
 
 .icon-stats:before {
@@ -545,6 +550,37 @@ table.stats td.td-padding {
 	display: inline-block;
 }
 
+.admin-wrapper {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.admin-wrapper h1 {
+	color: #fff;
+}
+
+.admin-wrapper table {
+	width: 100%;
+}
+
+.admin-wrapper th {
+	text-align: left;
+	font-weight: 700;
+	color: #fff;
+}
+
+.icon-show:before {
+	content: "\e606";
+}
+
+.icon-edit:before {
+	content: "\e629";
+}
+
+.icon-delete:before {
+	content: "\e62f";
+}
 
 
 

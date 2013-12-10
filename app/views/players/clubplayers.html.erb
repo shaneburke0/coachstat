@@ -9,7 +9,7 @@
     <th>Dob</th>
     <th>Height</th>
     <th>Weight</th>
-    <th>Club</th>
+    <th>Club id</th>
     <th></th>
     <th></th>
     <th></th>
@@ -23,7 +23,7 @@
     <td><%= player.dob %></td>
     <td><%= player.height %></td>
     <td><%= player.weight %></td>
-    <td><%= link_to player.clubid, :controller => 'clubs', :action => 'show', :id=>player.clubid %></td>
+    <td><%= player.clubid %></td>
     <td><%= link_to '', player, :class=>"icon-show", :title=>"Show" %></td>
     <td><%= link_to '', edit_player_path(player), :class=>"icon-edit", :title=>"Edit" %></td>
     <td><%= link_to '', player, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"icon-delete", :title=>"Delete" %></td>

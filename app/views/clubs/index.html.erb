@@ -1,11 +1,13 @@
-<h1>Listing clubs</h1>
+<div class="admin-wrapper">
+<h1>Listing Clubs</h1>
 
 <table>
   <tr>
     <th>Name</th>
     <th>Type</th>
     <th>Location</th>
-    <th>Profileid</th>
+    <th>Profile Id</th>
+    <th>Players</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,10 +18,11 @@
     <td><%= club.name %></td>
     <td><%= club.club_type %></td>
     <td><%= club.location %></td>
-    <td><%= club.profileid %></td>
-    <td><%= link_to 'Show', club %></td>
-    <td><%= link_to 'Edit', edit_club_path(club) %></td>
-    <td><%= link_to 'Destroy', club, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to club.profileid, :controller => 'profiles', :action => 'show', :id=>club.profileid %></td>
+    <td><%= link_to 'View players', :controller => 'players', :action => 'clubplayers', :id=>club.id %></td>
+    <td><%= link_to '', club, :class=>"icon-show", :title=>"Show" %></td>
+    <td><%= link_to '', edit_club_path(club), :class=>"icon-edit", :title=>"Edit" %></td>
+    <td><%= link_to '', club, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"icon-delete", :title=>"Delete" %></td>
   </tr>
 <% end %>
 </table>
@@ -27,3 +30,4 @@
 <br />
 
 <%= link_to 'New Club', new_club_path %>
+</div>

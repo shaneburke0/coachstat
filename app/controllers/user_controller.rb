@@ -5,7 +5,7 @@ class UserController < ApplicationController
   def admin_login 
     session[:login] = 1 
     flash[:notice] = "Admin user successfully logged in." 
-    redirect_to :controller => :home 
+    redirect_to :controller => :admin 
   end 
  
   def logout 
@@ -13,4 +13,5 @@ class UserController < ApplicationController
     flash[:notice] = "User logged out." 
     redirect_to :controller => :home 
   end 
+ 
 end
