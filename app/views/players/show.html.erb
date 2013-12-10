@@ -1,12 +1,13 @@
+<div class="admin-wrapper">
 <p id="notice"><%= notice %></p>
-
+<h1><%= @player.firstName %> <%= @player.lastName %></h1>
 <p>
-  <b>Firstname:</b>
+  <b>First name:</b>
   <%= @player.firstName %>
 </p>
 
 <p>
-  <b>Lastname:</b>
+  <b>Last name:</b>
   <%= @player.lastName %>
 </p>
 
@@ -31,10 +32,11 @@
 </p>
 
 <p>
-  <b>Clubid:</b>
+  <b>Club id:</b>
   <%= @player.clubid %>
 </p>
 
 
 <%= link_to 'Edit', edit_player_path(@player) %> |
 <%= link_to 'Back', players_path %>
+</div>

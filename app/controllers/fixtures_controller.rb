@@ -14,7 +14,7 @@ class FixturesController < ApplicationController
     @fixtures = Fixture.where('clubid' => params[:id])
     
     respond_to do |format|
-      #format.html # index.html.erb
+      format.html # index.html.erb
       format.json { render json: @fixtures }
     end
   end

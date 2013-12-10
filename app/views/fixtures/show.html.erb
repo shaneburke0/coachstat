@@ -1,3 +1,4 @@
+<div class="admin-wrapper">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -17,19 +18,24 @@
 
 <p>
   <b>Clubid:</b>
-  <%= @fixture.clubid %>
+  <%= link_to @fixture.clubid, :controller => 'clubs', :action => 'show', :id=>@fixture.clubid %>
 </p>
 
 <p>
-  <b>Oppid:</b>
-  <%= @fixture.oppid %>
+  <b>Opposition id:</b>
+  <%= link_to @fixture.oppid, :controller => 'clubs', :action => 'show', :id=>@fixture.oppid %>
 </p>
 
 <p>
   <b>Home:</b>
-  <%= @fixture.home %>
+  <%= link_to @fixture.home, :controller => 'clubs', :action => 'show', :id=>@fixture.home %>
+</p>
+
+<p>
+  <a href="/gamestats/fixture/<%= @fixture.id%>/club/<%= @fixture.clubid %>/oppositionclub/<%= @fixture.oppid %>">View game stats</a>
 </p>
 
 
 <%= link_to 'Edit', edit_fixture_path(@fixture) %> |
 <%= link_to 'Back', fixtures_path %>
+</div>
