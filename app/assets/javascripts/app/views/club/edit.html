@@ -1,6 +1,10 @@
 <div ng-controller="ClubEditCtrl" class="">	
 	<div class="">
 		<h1>Edit {{club.name}}</h1>
+		
+		<div ng-repeat="(key, value) in errortext">
+                <h3 class="red">{{key}} {{value[0]}}</h3>
+        </div>
 		<div>
 			<label>Name: </label> 
 			<input ng-model="club.name" />

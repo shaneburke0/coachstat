@@ -592,7 +592,9 @@ table.stats td.td-padding {
 .icon-delete:before {
 	content: "\e62f";
 }
-
+.red {
+	color: #DE5E60;
+}
 
 
 

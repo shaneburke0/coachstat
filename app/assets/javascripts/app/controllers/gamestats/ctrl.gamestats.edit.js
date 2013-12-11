@@ -3,7 +3,8 @@ coachStatControllers.controller('GameStatsEditCtrl', ['$scope', '$http', '$log',
 	$scope.clubstats = [];
 	$scope.club = new ModelClub({});
 	$scope.baseHref = 'clubs/' + $routeParams.clubId + '/fixtures/' + $routeParams.fixtureId ;
-
+	$scope.errors = '';
+	
 	var _lineupId = 0;
 	$http({ method: 'GET', url: '/clubs/' + $routeParams.clubId, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
 		.success(function(data, status, headers, config) {
@@ -141,6 +142,7 @@ coachStatControllers.controller('GameStatsEditCtrl', ['$scope', '$http', '$log',
 	};
 	
 	$scope.save = function() {
+		$scope.errors = '';
 		var json = JSON.stringify($scope.clubstats);
         $http({
                 url: '/gamestats/updategame/' + $routeParams.fixtureId,
@@ -153,6 +155,7 @@ coachStatControllers.controller('GameStatsEditCtrl', ['$scope', '$http', '$log',
                 
             }).error(function (data, status, headers, config) {
                 $log.warn(data, status, headers, config);
+                $scope.errors = data;
             });
 	};
 }]);

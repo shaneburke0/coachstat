@@ -1,6 +1,7 @@
 coachStatControllers.controller('ClubEditCtrl', ['$scope', '$http', '$log', '$routeParams', '$rootScope', '$location',
 	function($scope, $http, $log, $routeParams, $rootScope, $location) {
 	$scope.club = new ModelClub({});
+	$scope.errortext = '';
 	$scope.baseHref = '/clubs/' + $routeParams.clubId + '/details';
 	$http({ method: 'GET', url: '/clubs/' + $routeParams.clubId, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
 		.success(function(data, status, headers, config) {
@@ -21,6 +22,8 @@ coachStatControllers.controller('ClubEditCtrl', ['$scope', '$http', '$log', '$ro
 	}
 	
 	$scope.save = function(_club) {
+		$scope.errortext = '';
+		
 		var json = JSON.stringify(_club);
         $http({
                 url: '/clubs/' + _club.id,
@@ -32,10 +35,12 @@ coachStatControllers.controller('ClubEditCtrl', ['$scope', '$http', '$log', '$ro
                 $location.path($scope.baseHref);
             }).error(function (data, status, headers, config) {
                 $log.warn(data, status, headers, config);
+                $scope.errortext = data;
             });
 	};
 	
 	$scope.deleteClub = function() {
+		$scope.errortext = '';
 		if(confirm("Are you sure?")) {
     		$http({
                 url: '/clubs/' + $routeParams.clubId,
