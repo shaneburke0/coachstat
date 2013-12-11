@@ -1,0 +1,17 @@
+<div class="admin-wrapper">
+<h1>Edit <%= @user.email %></h1>
+ 
+<%= form_for(@user, :html => { :method => :put }) do |f| %>
+	<%= render :partial => 'user_fields', :locals => { :f => f } %>
+ 
+	<p><%= f.label :password %> <i>(leave blank if you don't want to change it)</i></p>
+	<p><%= f.password_field :password %></p>
+ 
+	<p><%= f.label :password_confirmation %></p>
+	<p><%= f.password_field :password_confirmation %></p>
+ 
+  <p><%= f.submit "Update" %></p>
+<% end %>
+<%= link_to "Back", :back %>
+
+</div>

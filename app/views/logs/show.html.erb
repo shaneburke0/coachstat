@@ -1,0 +1,22 @@
+<div class="admin-wrapper">
+<p id="notice"><%= notice %></p>
+<h1>Log id: <%= raw @log.id %></h1>
+<p>
+  <b>Message:</b> <br />
+  <%= raw @log.message %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @log.date %>
+</p>
+
+<p>
+  <b>Method:</b>
+  <%= @log.method %>
+</p>
+
+
+<%= link_to 'Edit', edit_log_path(@log) %> |
+<%= link_to 'Back', logs_path %>
+</div>

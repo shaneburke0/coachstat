@@ -1,0 +1,24 @@
+<div class="admin-wrapper">
+	<h1><%= @user.email %></h1>
+	
+	<p>
+		<b>Email:</b>
+		<%= @user.email %>
+	</p>
+	<p>
+		<b>Created at:</b>
+		<%= @user.created_at %>
+	</p>
+	<p>
+		<p>Last Sign In:</p>
+		<%= @user.last_sign_in_at %>
+	</p>
+	<p>
+		<b>Sign In Count:</b>
+		<%= @user.sign_in_count %>
+	</p>
+	
+	<%= link_to 'Back', users_path %>
+	<%= link_to '', edit_user_path(@user), :class=>"icon-edit", :title=>"Edit" %>
+	<%= link_to '', @user, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"icon-delete", :title=>"Delete" %>
+</div>

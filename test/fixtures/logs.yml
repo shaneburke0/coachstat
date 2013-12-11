@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  message: MyString
+  date: 2013-12-11 13:41:25
+  method: MyString
+
+two:
+  message: MyString
+  date: 2013-12-11 13:41:25
+  method: MyString

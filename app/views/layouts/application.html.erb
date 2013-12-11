@@ -19,7 +19,9 @@
 				<% if user_signed_in? %> 
 				
 					<% if current_user.try(:admin?) %>
-						<li><a href="/profiles" alt="profiles">Profiles</a></li>
+						<li><a href="/admin" alt="Dash">Dash</a></li>
+						<li><a href="/logs" alt="Logs">Logs</a></li>
+						<li><a href="/users" alt="Users">Users</a></li>
 						<li><a href="/clubs" alt="Clubs">Clubs</a></li>
 						<li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li> 
 					

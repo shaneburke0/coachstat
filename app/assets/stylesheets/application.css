@@ -457,6 +457,7 @@ table.stats td.td-padding {
 	display: inline-block;
 	width: 290px;
 	margin-right: 40px;
+	margin-bottom: 40px;
 }
 
 .boxes .box.right {
@@ -469,7 +470,9 @@ table.stats td.td-padding {
 .box .icon-team, 
 .box .icon-players, 
 .box .icon-stats,
-.box .icon-profiles {
+.box .icon-profiles,
+.icon-logs,
+.icon-fixtures {
 	font-size: 40px;
 	color: #DE5E60;
 }
@@ -483,11 +486,19 @@ table.stats td.td-padding {
 }
 
 .icon-profiles:before {
-	content: "\e609";
+	content: "\e605";
 }
 
 .icon-stats:before {
 	content: "\e625";
+}
+
+.icon-logs:before {
+	content: "\e60e";
+}
+
+.icon-fixtures:before {
+	content: "\e60a";
 }
 
 .boxes .box .icon,

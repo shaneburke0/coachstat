@@ -83,6 +83,7 @@ class LineupsController < ApplicationController
   
   def getFixtureLineup
     @lineup = Lineup.where('fixtureid' => params[:fixtureid]).last
+    @players = Lineupplayer.where('lineupid' => @lineup.id)
     
     respond_to do |format|
       format.html # index.html.erb

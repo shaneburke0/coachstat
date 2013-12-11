@@ -1,0 +1,23 @@
+<div class="admin-wrapper">
+<h1>Listing Users</h1>
+<table>
+	<tr>
+		<th>Email</th>
+		<th>Is Admin</th>
+		<th>Profile</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+<% @users.each do |u| %>
+  <tr>
+    <td><%= "#{u.email}" %></td>
+    <td><%= "#{u.admin}" %></td>
+    <td><%= link_to 'View profile', :controller => 'profiles', :action => 'getByUserId', :id=>u.id %></td>
+    <td><%= link_to '', user_path(u.id), :class=>"icon-show", :title=>"Show" %></td>
+    <td><%= link_to '', edit_user_path(u.id), :class=>"icon-edit", :title=>"Edit" %></td>
+    <td><%= link_to '', u, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"icon-delete", :title=>"Delete" %></td>
+  </tr>
+<% end %>
+</table>
+</div>

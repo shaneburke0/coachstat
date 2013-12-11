@@ -21,6 +21,24 @@ class ProfilesController < ApplicationController
       format.json { render json: @profile }
     end
   end
+  
+   # GET /profiles/1/getByUserId
+  # GET /profiles/1/getByUserId.json
+  def getByUserId
+    @profile = Profile.find_by_user_id(params[:id]) 
+    
+    if @profile.nil? 
+      @profile = Profile.new 
+      @profile.user_id = params[:id]
+      
+      @profile.save
+    end
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @profile }
+    end
+  end
 
   # GET /profiles/new
   # GET /profiles/new.json
@@ -93,9 +111,9 @@ class ProfilesController < ApplicationController
     else 
       @user = User.find(current_user.id) 
       @profile = Profile.find_by_user_id(@user.id) 
-      #redirect_to "/profiles/#{@profile.id}" 
+      
       respond_to do |format| 
-        #format.html 
+        format.html 
         format.json { render json: @profile } 
       end
      end 
