@@ -1,0 +1,53 @@
+<div class="admin-wrapper">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @lineup.id %>
+</p>
+
+<p>
+  <b>Fixtureid:</b>
+  <%= @lineup.fixtureid %>
+</p>
+
+<p>
+  <b>Clubid:</b>
+  <%= @lineup.clubid %>
+</p>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Lineupid</th>
+    <th>Playerid</th>
+    <th>Captain</th>
+    <th>Formation</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @players.each do |lineupplayer| %>
+  <tr>
+    <td><%= lineupplayer.id %></td>
+    <td><%= lineupplayer.lineupid %></td>
+    <td><%= lineupplayer.playerid %></td>
+    <td><%= lineupplayer.captain %></td>
+    <td><%= lineupplayer.position %></td>
+    <td><%= link_to 'Show', lineupplayer %></td>
+    <td><%= link_to 'Edit', edit_lineupplayer_path(lineupplayer) %></td>
+    <td><%= link_to 'Destroy', lineupplayer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br /><br />
+
+<%= link_to 'Add New Player', new_lineupplayer_path %>
+
+<br /><br />
+
+<%= link_to 'Edit', edit_lineup_path(@lineup) %> |
+<%= link_to 'Back', lineups_path %>
+</div>

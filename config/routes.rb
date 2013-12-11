@@ -1,5 +1,8 @@
 Coachstat::Application.routes.draw do
   
+  resources :logs
+
+
   get "admin/index"
 
   resources :contactus
@@ -16,6 +19,7 @@ Coachstat::Application.routes.draw do
   resources :clubs
   resources :profiles
   devise_for :users
+  resources :users
 
   get "home/index"
 
@@ -40,7 +44,8 @@ Coachstat::Application.routes.draw do
   put '/gamestats/updategame/:fixtureid', to: 'gamestats#updategame'
   get '/legal', to: 'legal#index'
   get '/admin', to: 'admin#index'
-
+  get '/profiles/:id/getByUserId', to: 'profiles#getByUserId'
+  post '/logs/storelogs', to: 'logs#storelogs'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

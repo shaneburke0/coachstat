@@ -32,9 +32,11 @@
 </p>
 
 <p>
-  <a href="/gamestats/fixture/<%= @fixture.id%>/club/<%= @fixture.clubid %>/oppositionclub/<%= @fixture.oppid %>">View game stats</a>
+  <a href="/gamestats/fixture/<%= @fixture.id %>/club/<%= @fixture.clubid %>/oppositionclub/<%= @fixture.oppid %>">View game stats</a>
 </p>
-
+<p>
+  <a href="/lineups/fixture/<%= @fixture.id %>">View lineups</a>
+</p>
 
 <%= link_to 'Edit', edit_fixture_path(@fixture) %> |
 <%= link_to 'Back', fixtures_path %>

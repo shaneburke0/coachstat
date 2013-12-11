@@ -11,8 +11,9 @@
 		</div>
 		<div class="box lrg players">
 			<a href="{{playersHref}}"><h2>Players</h2></a>
+			<input class="inline right" type="text" ng-model="playersSearch" placeholder="Search players" />
 			<div class="boxinner">
-				<div ng-repeat="player in club.players" >
+				<div ng-repeat="player in club.players | filter: playersSearch" >
 					<span class="player-thumb tilt">
 						<a href="{{playersHref}}/{{player.id}}" alt="{{player.lastName}}"
 							title="{{player.firstName}} {{player.lastName}}">
