@@ -1,7 +1,8 @@
 coachStatControllers.controller('ContactUsCtrl', ['$scope', '$http', '$log', '$routeParams', '$rootScope', '$location',
 	function($scope, $http, $log, $routeParams, $rootScope, $location) {
-		
+		$scope.errors = '';
 		$scope.send = function(_form) {
+			$scope.errors = '';
 			var json = JSON.stringify(_form);
 	        $http({
 	                url: '/contactus/',
@@ -14,6 +15,7 @@ coachStatControllers.controller('ContactUsCtrl', ['$scope', '$http', '$log', '$r
 	                $location.path('/#/contactus/confirm');
 	            }).error(function (data, status, headers, config) {
 	                $log.warn(data, status, headers, config);
+	                $scope.errors = data;
 	            });
 		};
 	

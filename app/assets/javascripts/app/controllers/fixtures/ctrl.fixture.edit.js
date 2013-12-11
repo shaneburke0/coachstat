@@ -4,6 +4,7 @@ coachStatControllers.controller('FixtureEditCtrl', ['$scope', '$http', '$log', '
 	$scope.fixture = new ModelFixture({});
 	$scope.baseHref = '/#/clubs/' + $routeParams.clubId + '/fixtures/' + $routeParams.fixtureId;
 	$scope.clubs = [];
+	$scope.errors = '';
 	
 	function createBreadcrumb() {
 		$rootScope.path = [{ label: 'Home', url: '#/'},
@@ -17,7 +18,7 @@ coachStatControllers.controller('FixtureEditCtrl', ['$scope', '$http', '$log', '
 		headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
 		.success(function(data, status, headers, config) {
 				
-				var fixture = new ModelFixture({ location: data.location, date: data.date, time: data.time, clubid: data.clubid, oppid: data.oppid, id: data.id });
+				var fixture = new ModelFixture({ location: data.location, date: data.datestr, time: data.timestr, clubid: data.clubid, oppid: data.oppid, id: data.id });
 				
 				$scope.fixture = fixture;
 				loadClubs();
@@ -40,6 +41,7 @@ coachStatControllers.controller('FixtureEditCtrl', ['$scope', '$http', '$log', '
 	}
 	
 	$scope.save = function(_fixture) {
+		$scope.errors = '';
 		var json = JSON.stringify(_fixture);
         $http({
                 url: '/fixtures/' + _fixture.id,
@@ -52,6 +54,7 @@ coachStatControllers.controller('FixtureEditCtrl', ['$scope', '$http', '$log', '
                 $location.path($scope.baseHref);
             }).error(function (data, status, headers, config) {
                 $log.warn(data, status, headers, config);
+                $scope.errors = data;
             });
 	};
 	

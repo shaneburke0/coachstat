@@ -2,6 +2,8 @@ coachStatControllers.controller('FixtureStatsEditCtrl', ['$scope', '$http', '$lo
 	function($scope, $http, $log, $routeParams, $rootScope, $location) {
 	$scope.baseHref = "clubs/" + $routeParams.clubId + "/fixtures/" + $routeParams.fixtureId;
 	$scope.lineup = new ModelLineup({});
+	$scope.errors = '';
+	
 	var _lineupId = 0;
 	
 	$http({ method: 'GET', url: '/lineups/fixture/' + $routeParams.fixtureId, headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*'}})
@@ -85,6 +87,7 @@ coachStatControllers.controller('FixtureStatsEditCtrl', ['$scope', '$http', '$lo
 	};
 	
 	$scope.save = function(players) {
+		$scope.errors = '';
 		var statsArray = [];
 		for(var i = 0; i <players.length; i++) {
 			statsArray.push(players[i].stats);
@@ -103,6 +106,7 @@ coachStatControllers.controller('FixtureStatsEditCtrl', ['$scope', '$http', '$lo
                 
             }).error(function (data, status, headers, config) {
                 $log.warn(data, status, headers, config);
+                $scope.errors = data;
             });
 	};
 }]);
