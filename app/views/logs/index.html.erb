@@ -35,5 +35,5 @@
 <br />
 <%= paginate @logs %>
 <%= link_to 'New Log', new_log_path %>
-<%= button_to "Store logs in DB", { :controller => "logs", :action => "storelogs"} %>
+<%= button_to "Store logs in DB", { :controller => "logs", :action => "storelogs"} %> <span>File size: <%= @filesize %></span>
 </div>
