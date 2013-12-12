@@ -1,0 +1,744 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:22', '2013-12-11 16:44:22', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:22', '2013-12-11 16:44:22', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:22', '2013-12-11 16:44:22', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:22', '2013-12-11 16:44:22', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:22', '2013-12-11 16:44:22', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:22', '2013-12-11 16:44:22', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:22', '2013-12-11 16:44:22', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:22', '2013-12-11 16:44:22', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:22', '2013-12-11 16:44:22', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:22', '2013-12-11 16:44:22', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:22', '2013-12-11 16:44:22', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:22', '2013-12-11 16:44:22', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (18.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (27.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:44:23', '2013-12-11 16:44:23', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (3.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (3.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (3.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (3.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (4.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:19', '2013-12-11 16:46:19', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (3.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "clubs"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)[0m
+SQLite3::SQLException: table clubs has no column named type: INSERT INTO "clubs" ("name", "type", "location", "profileid", "created_at", "updated_at", "id") VALUES ('MyString', 1, 'MyString', 1, '2013-12-11 16:46:20', '2013-12-11 16:46:20', 980190962)
+  [1m[35m (1.0ms)[0m  rollback transaction
