@@ -5,9 +5,16 @@ class ReadLogs
     formatted_str = formatted_str.gsub(/\n{1,2}/, "<br />")
     
     logs_arr = formatted_str.split("<br /> <br />")
-    
-    File.write("#{Rails.root}/log/" + filename, '')
-  
+
     return logs_arr
+  end
+  
+  
+  def clear(filename)
+    File.write("#{Rails.root}/log/" + filename, '')
+  end
+  
+  def size(filename)
+    return File.size?("#{Rails.root}/log/" + filename)
   end
 end

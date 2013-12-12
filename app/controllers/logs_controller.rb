@@ -1,12 +1,17 @@
 class LogsController < ApplicationController
   require 'ReadLogs'
   require 'Kaminari'
+  
   before_filter :authenticate_admin!
   # GET /logs
   # GET /logs.json
   def index
     myarray = Log.all
     @logs = Kaminari.paginate_array(myarray).page(params[:page])
+    
+    
+    readlogs = ::ReadLogs.new
+    @filesize = readlogs.size('development.log')
     
     respond_to do |format|
       format.html # index.html.erb
@@ -88,12 +93,13 @@ class LogsController < ApplicationController
   def storelogs
     readlogs = ::ReadLogs.new
     @logs = readlogs.read('development.log')
+    readlogs.clear('development.log')
     
     @logs.each do |l|
       @newlog = Log.new
       @newlog[:message] = l
       # regex for 2013-12-11 14:18:33
-      @newlog[:date] = l.scan(/([1]{1}[9]{1}[9]{1}\d{1}|[2-9]{1}\d{3})\-([0-2]?\d{1}|[3][0,1]{1})\-([0,1]?\d{1})\s([0]?\d|1\d|2[0-3]):([0-5]\d):([0-5]\d)$/) 
+      @newlog[:date] = l.scan(/\d{4}-\d{1,2}-\d{1,2}\s\d{1,2}\:\d{2}\:\d{2}/) 
       
       if l =~ /GET/
         @newlog[:method] = "GET"
