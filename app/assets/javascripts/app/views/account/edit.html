@@ -1,0 +1,35 @@
+<div ng-controller="MyAccountCtrl">
+	<div class="welcome">
+		<h1>Edit Account Details</h1>
+		<br />
+		<div class="boxes">
+			<form name="PostForm" ng-submit="submit()" novalidate>
+			<div class="box">
+				<label>First name: </label>
+				<input type="text" ng-model="profile.firstname" />
+				<br />
+				<label>Last name: </label>
+				<input type="text" ng-model="profile.lastname" />
+				<br />
+				<label>Address: </label>
+				<input type="text" ng-model="profile.address" />
+				<br />
+				<label>Mobile no: </label> 
+				<input type="text" ng-model="profile.mobile" />
+				<br />
+			</div>
+			
+			<div class="box">
+				<div>
+					<img class="profile" src="{{profile.imgurl}}" alt="{{profile.firstname}} {{profile.lastname}}" 
+						title="{{profile.firstname}} {{profile.lastname}}" />
+				</div>
+
+			</div>
+			<button ng-click="cancel()">Cancel</button>
+			<button ng-click="save(profile)">Save</button>	
+			</form>
+		</div>
+	</div>	
+	
+</div>

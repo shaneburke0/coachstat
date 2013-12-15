@@ -7,6 +7,7 @@
     <th>Lastname</th>
     <th>Address</th>
     <th>Mobile</th>
+    <th>Avatar</th>
     <th>User</th>
     <th></th>
     <th></th>
@@ -19,6 +20,7 @@
     <td><%= profile.lastname %></td>
     <td><%= profile.address %></td>
     <td><%= profile.mobile %></td>
+    <td><%= image_tag profile.avatar.url, :class=>"img-sml" %></td>
     <td><%= profile.user.email %></td>
     <td><%= link_to '', profile, :class=>"icon-show", :title=>"Show" %></td>
     <td><%= link_to '', edit_profile_path(profile), :class=>"icon-edit", :title=>"Edit" %></td>

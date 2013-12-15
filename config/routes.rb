@@ -46,6 +46,7 @@ Coachstat::Application.routes.draw do
   get '/admin', to: 'admin#index'
   get '/profiles/:id/getByUserId', to: 'profiles#getByUserId'
   post '/logs/storelogs', to: 'logs#storelogs'
+  put '/profiles/:id/image', to: 'profiles#uploadimage'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

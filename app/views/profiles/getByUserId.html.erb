@@ -25,7 +25,10 @@
   <b>User:</b>
   <%= @profile.user.email %> 
 </p>
-
+<p>
+	<b>Avatar:</b>
+	<%= image_tag @profile.avatar.url, :class=>"img-sml" %>
+</p>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>

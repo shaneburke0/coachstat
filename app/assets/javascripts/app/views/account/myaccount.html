@@ -1,6 +1,14 @@
 <div ng-controller="MyAccountCtrl">
-	<div>{{profile.firstname}}</div>
-	<div>{{profile.lastname}}</div>
-	<div>{{profile.address}}</div>
-	<div>{{profile.mobile}}</div>
+	<div class="welcome">
+		<h1>My Account Details</h1>
+		<a class="inline" href="/#/myaccount/edit">Edit</a>
+		<br />
+		<div>
+			<img class="profile" src="{{profile.imgurl}}" alt="{{profile.firstname}} {{profile.lastname}}" title="{{profile.firstname}} {{profile.lastname}}" />
+		</div>
+		<div><label>First name: </label>{{profile.firstname}}</div>
+		<div><label>Last name: </label>{{profile.lastname}}</div>
+		<div><label>Address: </label>{{profile.address}}</div>
+		<div><label>Mobile no: </label> {{profile.mobile}}</div>	
+	</div>	
 </div>

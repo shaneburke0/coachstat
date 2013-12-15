@@ -5,5 +5,6 @@ class Profile < ActiveRecord::Base
   
   belongs_to :user
   has_many :clubs
-  attr_accessible :address, :firstname, :lastname, :mobile, :user_id
+  attr_accessible :address, :firstname, :lastname, :mobile, :user_id, :image, :avatar
+  has_attached_file :avatar, :default_url => "/assets/profile/profile-img.jpg"
 end

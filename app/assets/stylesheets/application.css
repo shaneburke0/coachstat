@@ -596,5 +596,12 @@ table.stats td.td-padding {
 	color: #DE5E60;
 }
 
+img.profile {
+	width: 100px;
+}
+
+img.img-sml {
+	width: 50px;
+}
 
 

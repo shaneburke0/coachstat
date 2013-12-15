@@ -1,4 +1,5 @@
 class ProfilesController < ApplicationController
+  include Paperclip::Glue
   # GET /profiles
   # GET /profiles.json
   before_filter :authenticate_user!
@@ -118,4 +119,17 @@ class ProfilesController < ApplicationController
       end
      end 
   end 
+  
+  def uploadimage
+    @profile = Profile.find(params[:id])
+    
+    
+    if @profile.update_attributes(params[:profile])
+        #format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "update" }
+        format.json { render json: @profile.errors, status: :unprocessable_entity }
+      end
+  end
 end
