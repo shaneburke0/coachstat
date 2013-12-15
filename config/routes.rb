@@ -1,5 +1,11 @@
 Coachstat::Application.routes.draw do
   
+  get "analyser/passing"
+
+  get "analyser/tackling"
+
+  get "analyser/shooting"
+
   resources :logs
 
 
@@ -47,6 +53,10 @@ Coachstat::Application.routes.draw do
   get '/profiles/:id/getByUserId', to: 'profiles#getByUserId'
   post '/logs/storelogs', to: 'logs#storelogs'
   put '/profiles/:id/image', to: 'profiles#uploadimage'
+  get '/analyser', to: 'analyser#index'
+  post '/analyser/passing', to: 'analyser#passing'
+  post '/analyser/shooting', to: 'analyser#shooting'
+  post '/analyser/tackling', to: 'analyser#tackling'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
