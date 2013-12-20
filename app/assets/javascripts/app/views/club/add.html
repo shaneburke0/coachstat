@@ -1,30 +1,46 @@
 <div ng-controller="ClubNewCtrl" class="">	
-	<div class="">
+	<div class="welcome">
 		<h1>Create new club</h1>
-		<div>
-			<label>Name: </label> 
-			<input ng-model="club.name" />
-		</div>
-		<div>
-			<label>Location: </label> 
-			<input ng-model="club.location" />
-		</div>
-		<div>
-			<label>Type: </label> 
-			<select ng-model="club.club_type">
-				<option value="1">Soccer</option>
-				<option value="2">Gaelic Football</option>
-			</select>
-		</div>
-		<div>
-			<label>Image URL: </label>
-			<input ng-model="club.image" />
-			
-			<input type="hidden" ng-model="club.profileid" />
-		</div>
-		<div>
-			<button ng-click="cancel()">Cancel</button>
-			<button ng-click="create(club)">Create</button>	
-		</div>
+		<form name="clubForm" ng-submit="create(club)" novalidate>
+			<div>
+				<label>Name: </label> 
+				<input ng-model="club.name" required name="name" />
+				<div class="custom-error" ng-show="clubForm.name.$dirty && clubForm.name.$invalid">Invalid:
+					<span ng-show="clubForm.name.$error.required">Name is required.</span>
+                </div>
+			</div>
+			<br />
+			<div>
+				<label>Location: </label> 
+				<input ng-model="club.location" required name="location" />
+				<div class="custom-error" ng-show="clubForm.location.$dirty && clubForm.location.$invalid">Invalid:
+					<span ng-show="clubForm.location.$error.required">Location is required.</span>
+                </div>
+			</div>
+			<br />
+			<div>
+				<label>Type: </label> 
+				<select ng-model="club.club_type" required name="type">
+					<option value="1">Soccer</option>
+					<option value="2">Gaelic Football</option>
+				</select>
+				<div class="custom-error" ng-show="clubForm.type.$dirty && clubForm.type.$invalid">Invalid:
+					<span ng-show="clubForm.type.$error.required">Type is required.</span>
+                </div>
+			</div>
+			<br />
+			<div>
+				<label>Image URL: </label>
+				<input ng-model="club.image" />
+				
+				<input type="hidden" ng-model="club.profileid" />
+			</div>
+			<br />
+			<br />
+			<div>
+				<button ng-click="cancel()">Cancel</button>
+				<button type="submit" ng-disabled="clubForm.name.$invalid || clubForm.location.$invalid || clubForm.type.$invalid">Create</button>	
+			</div>
+		</form>
 	</div>
 </div>

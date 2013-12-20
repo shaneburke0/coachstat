@@ -1,21 +1,36 @@
-<div>
+<div class="welcome">
 	<h1>Contact Us</h1>
-	<div ng-repeat="(key, value) in errors">
-            <h3 class="red">{{key}} {{value[0]}}</h3>
-    </div>
-	<div>
-		<label>Name: </label>
-		<input type="text" ng-model="form.name" />
-	</div>
-	<div>
-		<label>Email: </label>
-		<input type="text" ng-model="form.email" />
-	</div>
-	<div>
-		<label>Message: </label>
-		<textarea type="text" ng-model="form.message"></textarea>
-	</div>
-	
-	<button ng-click="cancel()">Cancel</button>
-	<button ng-click="send(form)">Send</button>
+	<form name="contactForm" ng-submit="send(form)" novalidate>
+		<div ng-repeat="(key, value) in errors">
+	            <h3 class="red">{{key}} {{value[0]}}</h3>
+	    </div>
+		<div>
+			<label>Name: </label>
+			<input type="text" ng-model="form.name" required name="name" />
+			<div class="custom-error" ng-show="contactForm.name.$dirty && contactForm.name.$invalid">Invalid:
+				<span ng-show="contactForm.name.$error.required">Name is required.</span>
+            </div>
+		</div>
+		<br />
+		<div>
+			<label>Email: </label>
+			<input type="email" ng-model="form.email" required name="email" />
+			<div class="custom-error" ng-show="contactForm.email.$dirty && contactForm.email.$invalid">Invalid:
+				<span ng-show="contactForm.email.$error.required">Email is required.</span>
+				<span ng-show="contactForm.email.$error.email">Please, write a valid email address.</span>
+            </div>
+		</div>
+		<br />
+		<div>
+			<label>Message: </label>
+			<textarea type="text" ng-model="form.message" required name="message"></textarea>
+			<div class="custom-error" ng-show="contactForm.message.$dirty && contactForm.message.$invalid">Invalid:
+				<span ng-show="contactForm.message.$error.required">Message is required.</span>
+            </div>
+		</div>
+		<br />
+		<br />
+		<button ng-click="cancel()">Cancel</button>
+		<button type="submit" ng-disabled="contactForm.name.$invalid || contactForm.email.$invalid || contactForm.message.$invalid">Send</button>
+	</form>
 </div>
