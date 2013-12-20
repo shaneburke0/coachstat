@@ -1,35 +1,49 @@
 <div ng-controller="ClubEditCtrl" class="">	
-	<div class="">
+	<div class="welcome">
 		<h1>Edit {{club.name}}</h1>
-		
-		<div ng-repeat="(key, value) in errortext">
-                <h3 class="red">{{key}} {{value[0]}}</h3>
-        </div>
-		<div>
-			<label>Name: </label> 
-			<input ng-model="club.name" />
-		</div>
-		<div>
-			<label>Location: </label> 
-			<input ng-model="club.location" />
-		</div>
-		<div>
-			<label>Type: </label> 
-			<select ng-model="club.club_type">
-				<option value="1">Soccer</option>
-				<option value="2">Gaelic Football</option>
-			</select>
-		</div>
-		<div>
-			<label>Image URL: </label>
-			<input ng-model="club.image" />
-			
-			<input type="hidden" ng-model="club.profileid" />
-		</div>
-		<div>
-			<button ng-click="cancel()">Cancel</button>
-			<button ng-click="deleteClub()">Delete</button>
-			<button ng-click="save(club)">Save</button>	
-		</div>
+		<form name="clubForm" ng-submit="save(club)" novalidate>
+			<div ng-repeat="(key, value) in errortext">
+	                <h3 class="red">{{key}} {{value[0]}}</h3>
+	        </div>
+			<div>
+				<label>Name: </label> 
+				<input ng-model="club.name" required name="name" />
+				<div class="custom-error" ng-show="clubForm.name.$dirty && clubForm.name.$invalid">Invalid:
+					<span ng-show="clubForm.name.$error.required">Name is required.</span>
+                </div>
+			</div>
+			<br />
+			<div>
+				<label>Location: </label> 
+				<input ng-model="club.location" required name="location" />
+				<div class="custom-error" ng-show="clubForm.location.$dirty && clubForm.location.$invalid">Invalid:
+					<span ng-show="clubForm.location.$error.required">Location is required.</span>
+                </div>
+			</div>
+			<br />
+			<div>
+				<label>Type: </label> 
+				<select ng-model="club.club_type" required name="type">
+					<option value="1">Soccer</option>
+					<option value="2">Gaelic Football</option>
+				</select>
+				<div class="custom-error" ng-show="clubForm.type.$dirty && clubForm.type.$invalid">Invalid:
+					<span ng-show="clubForm.type.$error.required">Type is required.</span>
+                </div>
+			</div>
+			<br />
+			<div>
+				<label>Image URL: </label>
+				<input ng-model="club.image" />
+				
+				<input type="hidden" ng-model="club.profileid" />
+			</div>
+			<br />
+			<div>
+				<button ng-click="cancel()">Cancel</button>
+				<button ng-click="deleteClub()">Delete</button>
+				<button type="submit" ng-disabled="clubForm.name.$invalid || clubForm.location.$invalid || clubForm.type.$invalid">Save</button>	
+			</div>
+		</form>
 	</div>
 </div>

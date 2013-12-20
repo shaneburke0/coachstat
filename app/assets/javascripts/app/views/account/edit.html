@@ -3,19 +3,32 @@
 		<h1>Edit Account Details</h1>
 		<br />
 		<div class="boxes">
-			<form name="PostForm" ng-submit="submit()" novalidate>
+			<form name="accountForm" ng-submit="save(profile)" novalidate>
 			<div class="box">
 				<label>First name: </label>
-				<input type="text" ng-model="profile.firstname" />
+				<input type="text" name="firstname" ng-model="profile.firstname" required />
+				
+				<div class="custom-error" ng-show="accountForm.firstname.$dirty && accountForm.firstname.$invalid">Invalid:
+					<span ng-show="accountForm.firstname.$error.required">First name is required.</span>
+                </div>
 				<br />
 				<label>Last name: </label>
-				<input type="text" ng-model="profile.lastname" />
+				<input type="text" name="lastname" ng-model="profile.lastname" required />
+				
+				<div class="custom-error" ng-show="accountForm.lastname.$dirty && accountForm.lastname.$invalid">Invalid:
+					<span ng-show="accountForm.lastname.$error.required">Last name is required.</span>
+                </div>
+                
+                
 				<br />
 				<label>Address: </label>
-				<input type="text" ng-model="profile.address" />
+				<input type="text" name="address" ng-model="profile.address" required />
+				<div class="custom-error" ng-show="accountForm.address.$dirty && accountForm.address.$invalid">Invalid:
+					<span ng-show="accountForm.address.$error.required">Address is required.</span>
+                </div>
 				<br />
 				<label>Mobile no: </label> 
-				<input type="text" ng-model="profile.mobile" />
+				<input type="text" name="mobile" ng-model="profile.mobile" />
 				<br />
 			</div>
 			
@@ -27,7 +40,7 @@
 
 			</div>
 			<button ng-click="cancel()">Cancel</button>
-			<button ng-click="save(profile)">Save</button>	
+			<button type="submit" ng-disabled="accountForm.firstname.$invalid || accountForm.lastname.$invalid || accountForm.address.$invalid">Save</button>	
 			</form>
 		</div>
 	</div>	

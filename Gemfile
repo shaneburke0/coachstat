@@ -4,7 +4,7 @@ gem 'rails', '3.2.13'
 gem 'devise', '2.1.2'
 gem 'kaminari'
 gem "paperclip", "~> 3.0"
-gem "statanalyser"
+#gem "statanalyser"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
