@@ -1,32 +1,51 @@
-<div ng-controller="FixtureEditCtrl" >
+<div ng-controller="FixtureEditCtrl" class="welcome" >
 	<h3>Edit fixture details</h3>
 	<div ng-repeat="(key, value) in errors">
                 <h3 class="red">{{key}} {{value[0]}}</h3>
         </div>
 	<div class="info">
-		<div>
-			<label>Opposition: </label>
-			<select ng-model="fixture.oppid" ng-options="c.id as c.name for c in clubs">
-			</select>
-		</div>
-		<div>
-			<label>Date: </label>
-			<input ng-model="fixture.datestr" />	
-		</div>
-		<div>
-			<label>Time: </label>
-			<input ng-model="fixture.timestr" />	
-		</div>
-		<div>
-			<label>Location: </label>
-			<input ng-model="fixture.location" />			
-		</div>
-		<div>
-			<button ng-click="cancel()">Cancel</button>
-			<button ng-click="delete(fixture)">Delete</button>
-			<button ng-click="save(fixture)">Save</button>
-		</div>
-
+		<form name="fixtureForm" ng-submit="save(fixture)" novalidate>
+			<div>
+				<label>Opposition: </label>
+				<select ng-model="fixture.oppid" ng-options="c.id as c.name for c in clubs" required name="opposition">
+				</select>
+				<div class="custom-error" ng-show="fixtureForm.opposition.$dirty && fixtureForm.opposition.$invalid">Invalid:
+					<span ng-show="fixtureForm.opposition.$error.required">Opposition is required.</span>
+                </div>
+			</div>
+			<br />
+			<div>
+				<label>Date: </label>
+				<input ng-model="fixture.date" name="date" required ng-pattern='/^[0,1]?\d{1}\/(([0-2]?\d{1})|([3][0,1]{1}))\/(([1]{1}[9]{1}[9]{1}\d{1})|([2-9]{1}\d{3}))$/' ui-date="{ dateFormat: 'mm/dd/y' }" />
+				<div class="custom-error" ng-show="fixtureForm.date.$dirty && fixtureForm.date.$invalid">Invalid:
+					<span ng-show="fixtureForm.date.$error.required">Date is required.</span>
+					<span ng-show="fixtureForm.date.$error.pattern">Incorrect Format, should be MM/DD/YY!</span>
+                </div>	
+			</div>
+			<br />
+			<div>
+				<label>Time: </label>
+				<input ng-model="fixture.time" required name="time" />
+				<div class="custom-error" ng-show="fixtureForm.time.$dirty && fixtureForm.time.$invalid">Invalid:
+					<span ng-show="fixtureForm.time.$error.required">Time is required.</span>
+                </div>	
+			</div>
+			<br />
+			<div>
+				<label>Location: </label>
+				<input ng-model="fixture.location" required name="location" />
+				<div class="custom-error" ng-show="fixtureForm.location.$dirty && fixtureForm.location.$invalid">Invalid:
+					<span ng-show="fixtureForm.location.$error.required">Location is required.</span>
+                </div>			
+			</div>
+			<br />
+			<br />
+			<div>
+				<button ng-click="cancel()">Cancel</button>
+				<button ng-click="delete(fixture)">Delete</button>
+				<button type="submit" ng-disabled="fixtureForm.opposition.$invalid || fixtureForm.date.$invalid || fixtureForm.time.$invalid || fixtureForm.location.$invalid">Save</button>
+			</div>
+		</form>
 
 	</div>
 </div>
