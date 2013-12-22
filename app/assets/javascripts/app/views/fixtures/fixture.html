@@ -19,7 +19,7 @@
 			<a class="inline right" href="{{editFormationHref}}">Edit</a>
 			<div class="formation">
 				
-				<img ng-repeat="player in fixture.lineup.players" class="thumb draggable-player ui-widget-content" ng-src="{{player.prototype.image}}" title="{{player.prototype.firstName}} {{player.prototype.lastName}}" style="{{player.position}}" id="{{player.prototype.id}}" />
+				<img ng-repeat="player in fixture.lineup.players" class="thumb draggable-player ui-widget-content" ng-src="{{player.prototype.image}}" alt="{{player.prototype.firstName}} {{player.prototype.lastName}}" style="{{player.position}}" id="{{player.prototype.id}}" />
 
 				<div id="drop-pitch" class="pitch">
 					<div class="subs">

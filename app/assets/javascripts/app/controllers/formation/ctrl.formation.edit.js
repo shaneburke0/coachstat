@@ -81,7 +81,7 @@ coachStatControllers.controller('FormationEditCtrl', ['$scope', '$http', '$log',
 	}
 	
 	$scope.addPlayer = function(_player) {
-		var lineupplayer = new ModelLineupPlayer({player: {}, captain: false, position: '', playerid: _player.id, lineupid: _lineupid});
+		var lineupplayer = new ModelLineupPlayer({player: {}, captain: false, position: '', playerid: _player.id, lineupid: _lineupid, id: _lineupid});
 		var json = JSON.stringify(lineupplayer);
         $http({
                 url: '/lineupplayers.json',
