@@ -1,32 +1,49 @@
-<div ng-controller="PlayerCtrl">
+<div ng-controller="PlayerCtrl" class="welcome">
+	<h1>Edit {{player.firstName}} {{player.lastName}}</h1>
+	<form name="playerForm" ng-submit="save(player)" novalidate>
 	<div><img ng-src="{{player.image}}"/></div>
+	<br />
 	<div>
 		<label>First name:</label>
-		<input ng-model="player.firstName"/>
+		<input ng-model="player.firstName" required name="firstname"/>
+		<div class="custom-error" ng-show="playerForm.firstname.$dirty && playerForm.firstname.$invalid">Invalid:
+			<span ng-show="playerForm.firstname.$error.required">First name is required.</span>
+        </div>
 	</div>
+	<br />
 	<div>
 		<label>Last name:</label>
-		<input ng-model="player.lastName"/>
+		<input ng-model="player.lastName" required name="lastname"/>
+		<div class="custom-error" ng-show="playerForm.lastname.$dirty && playerForm.lastname.$invalid">Invalid:
+			<span ng-show="playerForm.lastname.$error.required">Last name is required.</span>
+        </div>
 	</div>
+	<br />
 	<div>
 		<label>Position:</label>
 		<input ng-model="player.position"/>
 	</div>
+	<br />
 	<div>
 		<label>Height</label>
 		<input ng-model="player.height"/>
 	</div>
+	<br />
 	<div>
 		<label>Weight</label>
 		<input ng-model="player.weight"/>
 	</div>
+	<br />
 	<div>
 		<label>D.O.B:</label>
 		<input ng-model="player.dob"/>
 	</div>
+	<br />
+	<br />
 	<div>
 		<button ng-click="cancel()">Cancel</button>
 		<button ng-click="delPlayer()">Delete</button>
-		<button ng-click="save(player)">Save</button>
+		<button type="submit" ng-disabled="playerForm.firstname.$invalid || playerForm.lastname.$invalid">Save</button>
 	</div>
+	</form>
 </div>
