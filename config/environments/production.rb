@@ -3,6 +3,8 @@ Coachstat::Application.configure do
 
   # Code is not reloaded between requests
   config.cache_classes = true
+  
+  config.static_cache_control = "public, max-age=31536000"  # in production.rb file
 
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
