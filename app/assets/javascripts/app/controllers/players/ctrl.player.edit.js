@@ -29,6 +29,7 @@ coachStatControllers.controller('PlayerEditCtrl', ['$scope', '$http', '$log', '$
                 headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*', 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')}
             }).success(function (data, status, headers, config) {
                 $log.info(data, status, headers, config);
+                $location.path($scope.baseHref);
             }).error(function (data, status, headers, config) {
                 $log(data, status, headers, config);
             });
@@ -42,7 +43,7 @@ coachStatControllers.controller('PlayerEditCtrl', ['$scope', '$http', '$log', '$
                 headers: {'X-Requested-With': 'XMLHttpRequest', 'Accept': 'application/json, text/plain, */*', 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')}
             }).success(function (data, status, headers, config) {
                 $log.info(data, status, headers, config);
-                // todo: redirect page
+                $location.path('/clubs/' + $routeParams.clubId);
             }).error(function (data, status, headers, config) {
                 $log(data, status, headers, config);
             });

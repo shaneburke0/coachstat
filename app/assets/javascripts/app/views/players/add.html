@@ -1,34 +1,52 @@
-<div ng-controller="PlayerNewCtrl">
-	<div>
-		<label>First name:</label>
-		<input ng-model="player.firstName"/>
-	</div>
-	<div>
-		<label>Last name:</label>
-		<input ng-model="player.lastName"/>
-	</div>
-	<div>
-		<label>Position:</label>
-		<input ng-model="player.position"/>
-	</div>
-	<div>
-		<label>Height</label>
-		<input ng-model="player.height"/>
-	</div>
-	<div>
-		<label>Weight</label>
-		<input ng-model="player.weight"/>
-	</div>
-	<div>
-		<label>D.O.B:</label>
-		<input ng-model="player.dob"/>
-	</div>
-	<div>
-		<input type="hidden" ng-model="player.clubid"/>
-		<input type="hidden" ng-model="player.clubname"/>
-	</div>
-	<div>
-		<button ng-click="cancel()">Cancel</button>
-		<button ng-click="save(player)">Save</button>
-	</div>
+<div ng-controller="PlayerNewCtrl" class="welcome">
+	<h1>Create Player</h1>
+	<br />
+	<form name="playerForm" ng-submit="save(player)" novalidate>
+		<div>
+			<label>First name:</label>
+			<input ng-model="player.firstName" required name="firstname"/>
+			<div class="custom-error" ng-show="playerForm.firstname.$dirty && playerForm.firstname.$invalid">Invalid:
+				<span ng-show="playerForm.firstname.$error.required">First name is required.</span>
+            </div>
+		</div>
+		<br />
+		<div>
+			<label>Last name:</label>
+			<input ng-model="player.lastName" required name="lastname"/>
+			<div class="custom-error" ng-show="playerForm.lastname.$dirty && playerForm.lastname.$invalid">Invalid:
+				<span ng-show="playerForm.lastname.$error.required">Last name is required.</span>
+            </div>
+		</div>
+		<br />
+		<div>
+			<label>Position:</label>
+			<input ng-model="player.position"/>
+		</div>
+		<br />
+		<div>
+			<label>Height</label>
+			<input ng-model="player.height"/>
+		</div>
+		<br />
+		<div>
+			<label>Weight</label>
+			<input ng-model="player.weight"/>
+		</div>
+		<br />
+		<div>
+			<label>D.O.B:</label>
+			<input ng-model="player.dob"/>
+		</div>
+		<br />
+		<div>
+			<input type="hidden" ng-model="player.clubid"/>
+			<input type="hidden" ng-model="player.clubname"/>
+		</div>
+		<br />
+		<br />
+		<div>
+			<button ng-click="cancel()">Cancel</button>
+			<button type="submit" ng-disabled="playerForm.firstname.$invalid || playerForm.lastname.$invalid ">Save</button>
+		</div>
+	</form>
 </div>
