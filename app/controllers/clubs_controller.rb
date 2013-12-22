@@ -3,12 +3,20 @@ class ClubsController < ApplicationController
   # GET /clubs.json
   before_filter :authenticate_user!
   def index
-    @user = User.find(current_user.id)
-    @profile = Profile.find(@user)
+    @profile = Profile.find_by_user_id(current_user.id)
+    
+    if @profile.nil?
+      @profile = Profile.new 
+      @profile.user_id = current_user.id
+      @profile.firstname = "joe"
+      @profile.lastname = "bloggs"
+      @profile.save  
+    end
+    
     @clubs = Club.where('profileid' => @profile.id)
+    
 
     respond_to do |format|
-      format.html # index.html.erb
       format.json { render json: @clubs }
     end
   end
@@ -48,7 +56,7 @@ class ClubsController < ApplicationController
   # POST /clubs.json
   def create
     @user = User.find(current_user.id)
-    @profile = Profile.find(@user)
+    @profile = Profile.find_by_user_id(current_user.id)
     @clubnew = params[:club]
     @clubnew[:profileid] = @profile.id
     @club = Club.new(@clubnew)

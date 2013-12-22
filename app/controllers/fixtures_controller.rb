@@ -61,6 +61,13 @@ class FixturesController < ApplicationController
 
     respond_to do |format|
       if @fixture.save
+        
+        @lineup = Lineup.new
+        @lineup.fixtureid = @fixture.id
+        @lineup.clubid = @fixture.clubid
+        @lineup.id = @fixture.id
+        @lineup.save
+        
         format.html { redirect_to @fixture, notice: 'Fixture was successfully created.' }
         format.json { render json: @fixture, status: :created, location: @fixture }
       else
